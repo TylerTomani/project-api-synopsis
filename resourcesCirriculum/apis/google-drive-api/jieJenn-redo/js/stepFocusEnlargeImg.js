@@ -28,12 +28,15 @@ stepTxts.forEach(stepTxt => {
         delargeAllVideo()
         removeTabToImages()
         removeAsTabIndex(e)
+        removeElargeAllImgs()
         // delargeImg(e)
         // delargeVid(e)
-      
+        
     })
     stepTxt.addEventListener('focusout', e => {        
-        removeElargeAllImgs
+        removeAsTabIndex(e)
+        removeElargeAllImgs()
+        removeTabToImages()
         delargeAllVideo()
         delargeImg(e)
     })

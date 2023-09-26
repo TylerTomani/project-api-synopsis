@@ -29,11 +29,13 @@ dropParts.forEach(dropPart=> {
     dropPart.addEventListener('keydown', e => {
         if(e.keyCode === 13){
             e.preventDefault()
+            removeTabToImages()
             togglePart(e)
         } 
     })
     dropPart.addEventListener('click', e => {
         e.preventDefault()
+        removeTabToImages()
         togglePart(e)
     })
     dropPart.addEventListener('focusin', e => {

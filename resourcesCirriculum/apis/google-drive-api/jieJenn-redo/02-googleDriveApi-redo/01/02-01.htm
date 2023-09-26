@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="../../css/flex-questions.css"/>
     <link rel="stylesheet" href="../../css/imgVid.css"/>
     <link rel="stylesheet" href="../../css/tutorial.css"/>
-    <link rel="stylesheet" href="../../../../../../../css/colors.css">
-    <script module src="../../../../../../../js/home-link-focus.js" defer></script>
+    <link rel="stylesheet" href="../../../../../../css/colors.css">
+    <link rel="stylesheet" href="../../../../../../css//copy-code.css">
+    <script module src="../../../../../../js/home-link-focus.js" defer></script>
+    <script module src="../../../../../../js/copy-code.js" defer></script>
     <script module src="../../js/letterFocus.js" defer></script>
     <script module src="../../js/stepFocusEnlargeImg.js" defer></script>
     <script module src="../../js/dropPartFocus.js" defer></script>
@@ -32,41 +34,43 @@
     </header>
     <main>
     
-        <!-- Step 1 -->
+        <!-- Step 1 - Google Drive Api > v3 Documentation -->
         <div class="part">
             <a id="steps01" tabindex="1" href="#" class="dropPart"><h2>Step 1 - Google Drive Api > v3 Documentation</h2></a>
-            <div class="steps-container show  ">
+            <div class="steps-container   ">  
                 <div class="step-col">
                     <div tabindex="1" class="step-txt">
-                        <h3></h3>
-                        <p>
+                        <p >
                             It doesn't seem like I'm on the correct site as seen in the tutorial.
-                            I googled <q></q>
+                            I googled <q>google drive api v3</q> and this is the first link 
+                            <br>
+                            <a target="_blank" href="https://developers.google.com/drive/api/reference/rest/v3">developers.google.com/drive/api/ref..</a> 
+                        </p>
+
+                        <p>
+                            The website in the tutorial looks like the one on the right
                         </p>
                     </div>
-                    <div class="step-img">
-                        <img src="imagesVideos" >
+                    <div class="img-2-container">
+                        <div class="step-img ">
+                            <img class="img-l" src="imagesVideos/00a.png" alt="">
+                        </div>
+                        <div class="step-img ">
+                            <img class="img-r" src="imagesVideos/00b.png" alt="">
+                        </div>
                     </div>
+
                 </div>
                 <!-- 01 -->
                 <div class="step">
-                    <div tabindex="1" class="step-txt">
+                    <div tabindex="1" class="step-txt question">
                         <h3>01</h3>
                         <p>
-                            <span class="r">I'm not sure if I am using the correct resource, Do i have to pay for account at</span> 
-                            <a href="#">Go back and find site if the following doesn't work</a>
-                        </p>
-                        <p>
-
-                            For now, Go to <a target="_blank" href="https://developers.google.com/drive/api/guides/about-sdk
-                            ">developers.google.com/drive/api/guides/</a>
-                        </p>
-                        <p>
-                            I believe this api allows us to verify accounts with our gmail account to third parties?
+                            Correction, Make sure you're own the <q>Guide</q> section
                         </p>
                     </div>
                     <div class="step-img">
-                        <img src="imagesVideos/00.png" alt="">
+                        <img src="imagesVideos/01-correction.png" alt="">
                     </div>
                 </div>
                 <!-- 02  -->
@@ -105,35 +109,104 @@
                         <img src="imagesVideos/02.png" >
                     </div>
                 </div>
-
             </div>
         </div>
-        <!-- Step 2 -->
+        <!-- Step 2 - Authentification OAuth Documentation -->
         <div class="part">
-            <a id="steps02" tabindex="1" href="#" class="dropPart"><h2>Step 2 - Authentification OAuth Documentation</h2></a>
-            <div class="steps-container ">
+            <a id="steps02" tabindex="1" href="#" class="dropPart"><h2>Step 2 - Authentification OAuth Documentation</h2> <span class="r">(problem 1 -scopes)</span></a>
+            <div class="steps-container  ">
+                <div class="step-col">
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                           In the tutorials he navigates to a <q>Authenticate your users</q> tab, seen below to the Right,
+                           <span class="r">Which contains the scopes</span>.
+                            <br>
+                            When I go to,
+                            <br>
+                             <a target="_blank" href="https://developers.google.com/drive/api/guides/about-sdk
+                             ">developers.google.com/drive/api/guides/</a>(seen below to the Left), no such tab exist and 
+                            the closest thing to it seems to be 
+                            <br>
+                            <a target="_blank" href="https://developers.google.com/workspace/guides/configure-oauth-consent
+                            ">developers.google.com/workspace/guides/configure-oauth-consent</a>
+                        </p>
+                    </div> 
+                    <div class="img-2-container">
+                        <div class="step-img ">
+                            <img class="img-l" src="imagesVideos/02a.png" alt="">
+                        </div>
+                        <div class="step-img ">
+                            <img class="img-r" src="imagesVideos/02b.png" alt="">
+                        </div>
+                    </div>
+                </div>
                 <!-- 01 -->
                 <div class="step">
-                    <div tabindex="1" class="step-txt playVid-click">
-                        <h2>01</h2>
+                    <div tabindex="1" class="step-vid step-txt playVid-click question">
+                        <h3>01</h3>
                         <p>
-                            On the drive document page <a target="_blank" href="https://developers.google.com/drive/api/guides/about-sdk
-                            ">developers.google.com/drive/api/guides/</a>
-                            go to <a target="_blank" href="https://developers.google.com/workspace/guides/configure-oauth-consent
-                            "><q>Configure OAuth consent</q></a>
+                            The Scopes seem to be here instead,
+                            <br>
+                            <a target="_blank" href="https://developers.google.com/drive/api/guides/api-specific-auth
+                            ">developers.google.com/drive/api/guides/api-specific-auth</a>
                         </p>
-                        
                     </div>
                     <div class="step-vid">
-                        <video src="imagesVideos/03.mp4" >
+                        <video src="imagesVideos/02-correction-scopes.mp4" >
                     </div>
-                </div>  
-                <!-- 02 -->
-
+                </div>
+                <!-- 02   -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt">
+                        <h3>02</h3>
+                        <p>
+                            He is using the 
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+https://www.googleapis.com/auth/drive	</pre>	
+                        </div>
+                        <p>
+                            Found at, 
+                            <br>
+                            <a target="_blank" href="https://developers.google.com/drive/api/guides/api-specific-auth#:~:text=Sensitive-,https%3A//www.googleapis.com/auth/drive,-View%20and%20manage">
+                                developers.google.com/drive/api/guides/api-specific-auth#:~:text=Sensitive-,https%3A//www.googleapis.com/auth/drive,-View%20and%20manage
+                            </a>
+                        </p>
+                    </div>
+                    <div class="step-img">
+                        <img src="imagesVideos/02-scope-drive.png" >
+                    </div>
+                </div>
                 <!-- 03 -->
                 <div class="step">
-                    <div tabindex="1" class="step-txt playVid-click">
-                        <h3>02</h3>
+                    <div tabindex="1" class="step-txt step-vid playVid-click">
+                        <h3>03</h3>
+                        <p>
+                            Notice How on my page I have the message displaying, 
+                            <br>
+                            <q>If your public application uses scopes that permit access to certain user data, it must complete a verification process. If you see unverified app...</q>
+                        </p>
+                        <p class="r">
+                            <strong>This must mean I have to </strong>
+                        </p>
+                        <p>
+                            Click,
+                            <a target="_blank" href="https://developers.google.com/workspace/guides/configure-oauth-consent
+                            ">
+                            <q><span class="b">Configure your app's OAuth consent screen and choose scopes</span></q>
+                            </a>
+                            
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-consentScreen.mp4" >
+                    </div>
+                </div>
+                <!-- 04 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt step-vid playVid-click question">
+                        <h3>04</h3>
                         <p>
                             <span class="r">Do I click</span> <i class="b">Go to OAuth consent screen</i>
                             then <i class="b">PUBLISH APP</i> 
@@ -150,9 +223,166 @@
       
             </div>
         </div>
-        <!-- Step 3 problems Encountering -->
+
+        <!-- Step 3 - Recreate Project and OAUTH Credential -->
         <div class="part">
-            <a id="steps03" tabindex="1" href="#" class="dropPart"><h2>Step 3 - <span class="r">problems Encountering</span></h2></a>
+            <a id="step04" tabindex="1" href="#" class="dropPart"><h2>Step 3 - Recreate Project and OAUTH Credential</h2></a>
+            <div class="steps-container show">
+                <div class="step-col">
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Publish app Didn't work so I'm going to Create a new project, and OAuth credential following the steps from <a target="_blank" href="../../01-googleApiGetStarted-redo/01-redo.htm">01-googleApiGetStarted</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- 01 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt step-vid playVid-click">
+                        <h3>01</h3>
+                        <p>
+                            I'm going to Click On
+                            <a target="_blank" href="https://developers.google.com/workspace/guides/configure-oauth-consent
+                            ">
+                            <q><span class="b">Configure your app's OAuth consent screen and choose scopes</span></q>
+                            </a> 
+                        </p>
+                        <p>
+                            Then click on 
+                            <br>
+                            <a target="_blank" href="https://console.cloud.google.com/apis/credentials/consent
+                            ">Go to OAuth consent screen</a>
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-01.mp4" >
+                    </div>
+                </div>
+                <!-- 02 -->
+                <div class="step">
+                    <div tabindex="1" class="step-vid playVid-click">
+                        <h3>02</h3>
+                        <p>
+                            Then I'm going to create a project called <q>demo api</q>
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-02.mp4" >
+                    </div>
+                </div>
+                <!-- 03 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt step-vid playVid-click">
+                        <h3>03</h3>
+                        <p>
+                            Select <q>demo api </q>
+                            from the project drop menu
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-03.mp4" >
+                    </div>
+                </div>
+                <!-- 04 -->
+                <div class="step">
+                    <div tabindex="1" class=" step-txt step-vid playVid-click">
+                        <h3>04</h3>
+                        <ul>
+                            <li>Select <q>External</q></li>
+                            <li>Give app a name and provide emails</li>
+                            <li><q>save and coninue</q> for both scopes and test users</li>
+                            <li>go back to dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-04.mp4" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Step 4 - Recreate Project and OAUTH Credential -->
+        <div class="part">
+            <a id="step04" tabindex="1" href="#" class="dropPart"><h2>Step 3 - Set up OAUTH Credential</h2></a>
+            <div class="steps-container show">
+                <div class="step-col">
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Publish app Didn't work so I'm going to Create a new project, and OAuth credential following the steps from <a target="_blank" href="../../01-googleApiGetStarted-redo/01-redo.htm">01-googleApiGetStarted</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- 01 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt step-vid playVid-click">
+                        <h3>01</h3>
+                        <p>
+                            I'm going to Click On
+                            <a target="_blank" href="https://developers.google.com/workspace/guides/configure-oauth-consent
+                            ">
+                            <q><span class="b">Configure your app's OAuth consent screen and choose scopes</span></q>
+                            </a> 
+                        </p>
+                        <p>
+                            Then click on 
+                            <br>
+                            <a target="_blank" href="https://console.cloud.google.com/apis/credentials/consent
+                            ">Go to OAuth consent screen</a>
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-01.mp4" >
+                    </div>
+                </div>
+                <!-- 02 -->
+                <div class="step">
+                    <div tabindex="1" class="step-vid playVid-click">
+                        <h3>02</h3>
+                        <p>
+                            Then I'm going to create a project called <q>demo api</q>
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-02.mp4" >
+                    </div>
+                </div>
+                <!-- 03 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt step-vid playVid-click">
+                        <h3>03</h3>
+                        <p>
+                            Select <q>demo api </q>
+                            from the project drop menu
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-03.mp4" >
+                    </div>
+                </div>
+                <!-- 04 -->
+                <div class="step">
+                    <div tabindex="1" class=" step-txt step-vid playVid-click">
+                        <h3>04</h3>
+                        <ul>
+                            <li>Select <q>External</q></li>
+                            <li>Give app a name and provide emails</li>
+                            <li><q>save and coninue</q> for both scopes and test users</li>
+                            <li>go back to dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/03-04.mp4" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Step 3 problems Encountering -->
+        
+        <div class="part">
+            <a id="steps05" tabindex="1" href="#" class="dropPart"><h2>Step 3 - <span class="r">problems Encountering</span></h2></a>
             <div class="steps-container">
                 <!-- 01 -->
                 <div class="step">
@@ -217,7 +447,7 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
         </div>
         <!-- Step 4 Starting the script -->
         <div class="part rbshadow">
-            <a id="steps04" tabindex="1" href="#" class="dropPart rbshadow"><h2>Step 4 - start the script <span class="r">(Main Problem)</span></h2></a>
+            <a id="steps05" tabindex="1" href="#" class="dropPart rbshadow"><h2>Step 4 - start the script <span class="r">(Main Problem)</span></h2></a>
             <div class="steps-container">
                 <div class="step">
                     <div tabindex="1" class="step-txt">
