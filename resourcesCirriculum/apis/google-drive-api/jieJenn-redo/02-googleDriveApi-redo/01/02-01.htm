@@ -219,15 +219,14 @@ https://www.googleapis.com/auth/drive	</pre>
                     <div class="step-vid">
                         <video src="imagesVideos/04.mp4" >
                     </div>
-                </div>
-      
+                </div>   
             </div>
         </div>
 
-        <!-- Step 3 - Recreate Project and OAUTH Credential -->
+        <!-- Step 3 - Recreate Project  -->
         <div class="part">
-            <a id="step04" tabindex="1" href="#" class="dropPart"><h2>Step 3 - Recreate Project and OAUTH Credential</h2></a>
-            <div class="steps-container show">
+            <a id="step04" tabindex="1" href="#" class="dropPart"><h2>Step 3 - Recreate Project </h2></a>
+            <div class="steps-container ">
                 <div class="step-col">
                     <div tabindex="1" class="step-txt">
                         <p>
@@ -301,8 +300,8 @@ https://www.googleapis.com/auth/drive	</pre>
         </div>
         <!-- Step 4 - Recreate Project and OAUTH Credential -->
         <div class="part">
-            <a id="step04" tabindex="1" href="#" class="dropPart"><h2>Step 3 - Set up OAUTH Credential</h2></a>
-            <div class="steps-container show">
+            <a id="step04" tabindex="1" href="#" class="dropPart"><h2>Step 4 - Set up OAUTH Credential</h2></a>
+            <div class="steps-container ">
                 <div class="step-col">
                     <div tabindex="1" class="step-txt">
                         <p>
@@ -329,7 +328,7 @@ https://www.googleapis.com/auth/drive	</pre>
                         </p>
                     </div>
                     <div class="step-vid">
-                        <video src="imagesVideos/03-01.mp4" >
+                        <video src="imagesVideos/work3-1.mp4" >
                     </div>
                 </div>
                 <!-- 02 -->
@@ -337,30 +336,24 @@ https://www.googleapis.com/auth/drive	</pre>
                     <div tabindex="1" class="step-vid playVid-click">
                         <h3>02</h3>
                         <p>
-                            Then I'm going to create a project called <q>demo api</q>
+                            Then I'm going to follow the steps from <a target="_blank" href="../../01-googleApiGetStarted-redo/01-redo.htm">
+                                01-googleApiGetStarted-redo
+                            </a> and create a project called <q>demo api</q>
+                            Then create the OAUTH 2.0 credential
+                            <br>
+                            Chooose "External"
                         </p>
+                 
                     </div>
                     <div class="step-vid">
-                        <video src="imagesVideos/03-02.mp4" >
+                        <video src="imagesVideos/work3-2.mp4" >
                     </div>
                 </div>
+        
                 <!-- 03 -->
                 <div class="step">
-                    <div tabindex="1" class="step-txt step-vid playVid-click">
-                        <h3>03</h3>
-                        <p>
-                            Select <q>demo api </q>
-                            from the project drop menu
-                        </p>
-                    </div>
-                    <div class="step-vid">
-                        <video src="imagesVideos/03-03.mp4" >
-                    </div>
-                </div>
-                <!-- 04 -->
-                <div class="step">
                     <div tabindex="1" class=" step-txt step-vid playVid-click">
-                        <h3>04</h3>
+                        <h3>03</h3>
                         <ul>
                             <li>Select <q>External</q></li>
                             <li>Give app a name and provide emails</li>
@@ -372,32 +365,68 @@ https://www.googleapis.com/auth/drive	</pre>
                         <video src="imagesVideos/03-04.mp4" >
                     </div>
                 </div>
-            </div>
-        </div>
-
-
-
-
-
-        <!-- Step 3 problems Encountering -->
-        
-        <div class="part">
-            <a id="steps05" tabindex="1" href="#" class="dropPart"><h2>Step 3 - <span class="r">problems Encountering</span></h2></a>
-            <div class="steps-container">
-                <!-- 01 -->
+      
+                <!-- 04 -->
                 <div class="step">
-                    <div tabindex="1" class="step-txt playVid-click">
-                        <h3>01</h3>
-                        <p>
-                            Along with Part 2 above, steps 02 and 03, <span class="r">I am not sure </span> if i'm working with the same resources as the tutorial,
-                        </p>
-                        <p>
-                            <span class="r">Do I have to enable the</span> <a target="_blank" href="
-                            ">Library &rarr; Drive</a> in my project in my developers.console project 
+                    <div tabindex="1" class="step-txt">
+                        <h3>04</h3>
+                        <p> 
+                            I'm going to choose <q>Web application</q>
+                            because in another tutorial when working with python script they chose that.
+                            and download the json client secret file to the directory my script is in
                         </p>
                     </div>
                     <div class="step-vid">
-                        <video src="imagesVideos/06.mp4" >
+                        <video src="imagesVideos" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Step 5 - Set up script -->
+        <div class="part">
+            <a id="step05" tabindex="1" href="#" class="dropPart"><h2>Step 5 Set up Script</h2></a>
+            <div class="steps-container show">
+                <div class="step-col">
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                           On his page it shows a python tab seen below to the right, I Can't not find this tab, but I'm assuming 
+                           I need to use <code> pip</code> 
+                           to  install
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib</pre>	
+                        </div>
+                        <p>
+                            I think the documentation for python must be somewhere on this page 
+                            <br>
+                            <a target="_blank" href="https://developers.google.com/drive/api/guides/about-sdk">
+                                developers.google.com/drive/api/guides/about-sdk
+                            </a>
+                        </p>
+                    </div>
+                    <div class="img-2-container">
+                        <div class="step-img ">
+                            <img class="img-l" src="imagesVideos/05-00.png" alt="">
+                        </div>
+                        <div class="step-img ">
+                            <img class="img-r" src="imagesVideos/05-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 01 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt step-vid playVid-click">
+                        <h3>01</h3>
+                        <p>
+                            The next step is to enable the Drive Api,
+                            go to the top left menu 
+                            <br> <q>APIs and Services</q> &rarr; Library, 
+                            <br> search for drive and enable it
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/05-02.mp4" >
                     </div>
                 </div>
                 <!-- 02 -->
@@ -405,69 +434,7 @@ https://www.googleapis.com/auth/drive	</pre>
                     <div tabindex="1" class="step-txt">
                         <h3>02</h3>
                         <p>
-                            <span class="r">I cannot find the page displayed in tutorial here to the right</span> with 
-                            instructions on how to install library for script
-                        </p>
-                        <p>
-                            <span class="r">Remember</span> make a venv for this project, below are the libaries to install with pip
-                        </p>
-                        <div class="code-container">
-                            <pre class="copy-code">
-pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib</pre>	
-                        </div>
-                    </div>
-                    <div class="step-img">
-                        <img src="imagesVideos/07.png" >
-                    </div>
-                </div>
-                <!-- 03 -->
-                <div class="step">
-                    <div tabindex="1" class="step-txt">
-                        <h3>03</h3>
-                        <p>
-                            <span class="r">I think i need to set up and use this site,</span> 
-                            <a target="_blank" href="https://cloud.google.com/gcp?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1605212&utm_content=text-ad-none-any-DEV_c-CRE_665735450627-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt_Google+Cloud-KWID_43700077223807301-kwd-26415313501&utm_term=KW_google+cloud+platform-ST_google+cloud+platform&gclid=CjwKCAjwsKqoBhBPEiwALrrqiGiGvA3hKz2_IhtaPMg6PnrfVyCBAlLOcpj2kJkioe4er9QjtT0P2BoC7YwQAvD_BwE&gclsrc=aw.ds&hl=en
-                            ">Google Cloud Platform</a> 
-                        </p>
-                        <p>
-                            I will need a credit card, hopefully tmrw I will get one,
-                        </p>
-                        <p>
-                            Regardless, you would still do step 1 of this part, part 3.
-                        </p>
-                        <p>
-                            if the next steps in Part 4 do NOT work, it is because of the wrong step
-                        </p>
-                    </div>
-                    <div class="step-img">
-                        <!-- <img src="imagesVideos/" > -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Step 4 Starting the script -->
-        <div class="part rbshadow">
-            <a id="steps05" tabindex="1" href="#" class="dropPart rbshadow"><h2>Step 4 - start the script <span class="r">(Main Problem)</span></h2></a>
-            <div class="steps-container">
-                <div class="step">
-                    <div tabindex="1" class="step-txt">
-                        <h3>01</h3>
-                        <p>
-                            You will need to add the below module python script, to more easily create request. 
-                            Add this to the same directory and 
-                        </p>
-                        <ul>
-                            <li>python script</li>
-                            <li>venv</li>
-                            <li>client_secret.json file for OAuth</li>
-                        </ul>
-                        <div class="code-container">
-                            <pre class="copy-code">
-pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib</pre>	
-                        </div>
-                        <p>
-                            Save module as <q>Google.py</q>, name script something like <q>demo.py</q>
-                            <br>Install libraries above via pip in the venv within the directory
+                            He uses the following script inside the same direcotry it create request
                         </p>
                         <div class="code-container">
                             <pre class="copy-code">
@@ -477,8 +444,7 @@ from google_auth_oauthlib.flow import Flow, InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 from google.auth.transport.requests import Request
-
-
+                                
 def Create_Service(client_secret_file, api_name, api_version, *scopes):
     print(client_secret_file, api_name, api_version, scopes, sep='-')
     CLIENT_SECRET_FILE = client_secret_file
@@ -517,98 +483,81 @@ def Create_Service(client_secret_file, api_name, api_version, *scopes):
 
 def convert_to_RFC_datetime(year=1900, month=1, day=1, hour=0, minute=0):
     dt = datetime.datetime(year, month, day, hour, minute, 0).isoformat() + 'Z'
-    return dt</pre>	
+    return dt    </pre>	
                         </div>
                     </div>
+                </div>
+                <!-- 03 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt">
+                        <h3>04</h3>
+                        <p>
+                            I created a <code> vevn</code> in the same directory as both script and installed the following packages
+                            <div class="code-container">
+                                <pre class="copy-code">
+    pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib</pre>	
+                            </div>
+                        </p>
+                    </div>
                     <div class="step-img">
-                        <img src="imagesVideos/08.png" >
+                        <img src="imagesVideos/05-3.png" >
+                    </div>
+                </div>
+                <!-- 04 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt">
+                        <h3>04</h3>
+                        <p>
+                            Originally i didn't activate but now i activated it and installed the library in pip properly
+                        </p>
+                    </div>
+                    <div class="step-img">
+                        <img src="imagesVideos/05-04.png" >
+                    </div>
+                </div>
+                <!-- 05 -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt question">
+                        <h3>05</h3>
+                        <p>
+                            For <code><span class="m">SCOPES</span></code> go to 
+                            <br>
+                            <a target="_blank" href="https://developers.google.com/drive/api/guides/api-specific-auth#:~:text=Sensitive-,https%3A//www.googleapis.com/auth/drive,-View%20and%20manage
+                        "></a>
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+https://www.googleapis.com/auth/drive	    </pre>	
+                        </div>
+                        <p class="r">
+                            Also I'm assuming I need to activate <code>venv</code>
+                            in vs Code
+                        </p>
+                    </div>
+                    <div class="step-img">
+                        <img src="imagesVideos/05-05.png" >
                     </div>
                 </div>
                 <div class="step">
                     <div tabindex="1" class="step-txt">
-                        <h3>02</h3>
+                        <h3>FINALLY ONCE AGAIN</h3>
                         <p>
-                            In script, import the <code>Create_Service()</code> Function from the Google.py module, we then need to provice
-                        </p>
-                        <ul>
-                            <li><code class="o">CLIENT_SECRET_FILE</code></li>
-                            <li><code class="o">API_NAME</code></li>
-                            <li><code class="o">API_VERSION</code></li>
-                            <li><code class="o">SCOPES</code></li>
-                        </ul>
-                        <p>
-                            The scopes can be found at <a target="_blank" href="https://developers.google.com/identity/protocols/oauth2/scopes#drive:~:text=Google%20Drive%20files-,Google%20Drive%20API%2C%20v3,-Scopes
-                            ">developers.google.com/identity/protocols/oauth2/scopes</a>
-                            we are using,
-                        </p>
-                        <div class="code-container">
-                            <pre class="copy-code">
-<span class="m">https://www.googleapis.com/auth/drive</span></pre>	
-                        </div>
-                        <div class="code-container">
-                            <pre class="copy-code">
-from Google import Create_Service
-<span class="o">CLIENT_SECRET_FILE</span> = 'client_secret.json'
-<span class="o">API_NAME</span> = 'drive'
-<span class="o">API_VERSION</span> = 'v3'
-<span class="o">SCOPES</span> = '<span class="m">https://www.googleapis.com/auth/drive</span> '
-service = Create_Service(CLIENT_SECRET,API_NAME,API_VERSION,SCOPES)
-
-</pre>	
-
-                        </div>
-                    </div>
-                    <div class="step-img">
-                        <img src="imagesVideos" >
-                    </div>
-                </div>
-                <div class="step">
-                    <div tabindex="1" class="step-txt">
-                        <h3>03 - dir</h3>
-                        <p>
-                            The <code><span class="lc">dir</span>()</code> will list the methods and the parameters if the request is a success, this a great function
-                        </p>
-                        <div class="code-container">
-                            <pre class="copy-code">
-from Google import Create_Service
-<span class="o">CLIENT_SECRET_FILE</span> = 'client_secret.json'
-<span class="o">API_NAME</span> = 'drive'
-<span class="o">API_VERSION</span> = 'v3'
-<span class="o">SCOPES</span> = '<span class="m">https://www.googleapis.com/auth/drive</span> ' 
-service = Create_Service(CLIENT_SECRET_FILE,API_NAME,API_VERSION,SCOPES)
-
-print(<span class="lc">dir</span>(service))
-</pre>	
-
-                        </div>
-                    </div>
-                    <div class="step-img">
-                        <img src="imagesVideos/09.png" >
-                    </div>
-                </div>
-                <div class="step rbshadow">
-                    <div tabindex="1" class="step-txt r">
-                        <h3>04 - My main Error</h3>
-                        <p>
-                            I believe I found my main error, this is the same problem I am encountering with the medent script,
-                            I must be using the wrong platform, once I get my credit card I will attempt it all again with 
-                            Google Cloud Platform Site
+                            I CAN't GET AUTHORIZATION, I don't know what I'm doing wrong I need to get over this hurdle
                         </p>
                     </div>
                     <div class="step-img">
-                        <img src="imagesVideos/10.png" >
+                        <img src="imagesVideos/mainProblem.png" >
                     </div>
                 </div>
             </div>
         </div>
+        <footer tabindex="1" id="part06"></footer>
 
-        <footer tabindex="1">
-            <div class="project-container">
-                <h3><a href=""id="tutor" class="project">Tutor</h3></a>
 
-            </div>
-            
-        </footer>
+
+
+
+
 
 
 
