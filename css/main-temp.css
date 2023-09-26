@@ -1,0 +1,110 @@
+* {
+    margin:0; 
+    padding:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main {
+    margin: 0 2.5%;
+    padding: 0 2.5%;
+}
+.subject-container {
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.subject-container > .subject-header {
+    display: flex;
+}
+.subject-container > .subject-header > .subject {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5%;
+}
+.subject-container > .subject-header > .subject > img {
+    width: 10%;
+}
+.subject-container > .subject-tutorials-container{
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.subject-container > .subject-tutorials-container > .tutorial,
+.subject-container > .subject-tutorials-container > .playlist-container{
+    /* border: 2px solid blue; */
+    flex-basis: 47.5%;
+}
+
+.playlist-container > .tutorials-container {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.playlist-container > .playlist-tutorials-container > .tutorial > h2 {
+    font-size: 1.1rem;
+}
+.playlist-container > .playlist-tutorials-container > .tutorial > img {
+    width: 50%;
+    margin: 0 2.5%;
+}
+
+
+/* .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.projects-container > .project {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    margin-right: 2.5%;
+} */
+
+
+/* .playlist-container {
+    display: flex;
+}
+.playlist-container {
+    display: flex;
+    align-items: start;
+    width: 75%;
+    margin-top: 1%;
+    width: 60%;
+}
+.playlist-container > header{
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1%;
+}
+.playlist-container > header >  h2 {
+    width: 59%;
+}
+
+.project > img ,
+.playlist-container > header > img,
+.tutorial > img {
+    width: 100%;
+    border: 3px orange solid;
+    max-width: 250px;
+    max-height: 250px;
+} */
+
+.subject:active,.subject:focus,.subject:hover,
+.project:active,.project:focus,.project:hover,
+.playlist-container:active,.playlist-container:focus,.playlist-container:hover,
+.tutorial:active,.tutorial:focus,.tutorial:hover{
+    border: 3px solid blue;
+    box-shadow: 0px 0px 4px 2px blue;
+}
+
+.hide {
+    display: none !important;
+}
+.show {
+    display: inline-flex !important;
+}

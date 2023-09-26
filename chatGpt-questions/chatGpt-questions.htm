@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatGpt-questions</title>
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/chatGptCodeColors.css">
+    <link rel="stylesheet" href="css/copy-code.css">
+    <!-- <script module src="js/subdrop-topics.js" defer></script> -->
+    <script module src="../js/copy-code.js" defer></script>
+    <script module src="js/drop-topics.js" defer></script>
+    <!-- <script module src="js/toggleAnswers.js" defer></script> -->
+    <script module src="js/letterFocus.js" defer></script>
+    <link rel="stylesheet" href="css/chatGpt-questions.css">
+</head>
+<body>
+    <header class="fc">
+        <div  class="fi homelink">
+            <a tabindex="1" href="../index.htm">home</a>
+            <h1>chatGpt-questions</h1>
+        </div>
+        <div id="logo" class="fi">
+            <img src="chatgptLogo.png"alt="">
+        </div>
+    </header>
+    <main>
+   
+        <!-- Python -->
+        <div class="fcol topic-container">  
+            <h2><a id="python"  tabindex="1"  href="#"class='drop-topic'>Python</a></h2>
+            <div class="fcol subtopics-container ">
+                <div class="subtopic-container">
+                    <h3><a tabindex="1" href="#" class="subdrop-topic">json</a></h3>
+                    <div class="fcol subquestions-containers   ">           
+                        <div class="fi fcol question-container">
+                            <div tabindex="1" class="fc question">
+                                <div class="fi ts-icon-container">
+                                    <img class="fi logo" src="images/ts-icon.png" alt="">
+                                </div>
+                                <div class="fi fcol question-txt">                            
+                                    <h5 class="the-question"><strong>question:</strong>
+                                        how do i get the json response to not be on 1 line within 'json_str' in the following script</h5>
+                                        (In Visual Studio Code)
+                                </div>
+                            </div>
+                            <div class="fc answer">
+                                <div class="fi logo-icon-container">
+                                    <img class="fi logo" src="images/logo-icon.png" alt="">
+                                </div>
+                                <div class="fi fcol answer-txt">
+                                    <p>
+                                        Press
+                                    </p>
+                                    <code>cntrl + K then press F</code> 
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- VS Code -->
+                <div class="subtopic-container">
+                    <h3><a tabindex="1" href="#" class="subdrop-topic">VS Code(Errors)</a></h3>
+                    <div class="fcol subquestions-containers   ">           
+                        <!-- Python -> VS Code (Errors) - run venv in VS Code Console -->
+                        <div class="fi fcol question-container">
+                            <h4> venv - run venv in VS Code Console</h4>
+                            <div tabindex="1" class="fc question">
+                                <div class="fi ts-icon-container">
+                                    <img class="fi logo" src="images/ts-icon.png" alt="">
+                                </div>
+                                <div class="fi fcol question-txt">
+                                    <h5 tabindex="1" class="the-question"><strong>question:</strong>
+                                        Why does visual studio code display the following "                                </h5>
+                                    <div class="code-container">
+                                        <pre class="copy-code vs-code-console">
+    PS C:\Users\mtoma\Desktop\oauth_project> .\venv\Scripts\activate
+    .\venv\Scripts\activate  & : File C:\Users\mtoma\Desktop\o
+    auth_project\venv\Scripts\Activate.ps1 cannot be       
+    loaded because running scripts is disabled on this     
+    system. For more information, see 
+    about_Execution_Policies at 
+    https:/go.microsoft.com/fwlink/?LinkID=135170.
+    At line:1 char:1
+    + .\venv\Scripts\activate
+    + ~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : SecurityError: (:) [], P 
+        SSecurityException
+        + FullyQualifiedErrorId : UnauthorizedAccess       
+    PS C:\Users\mtoma\Desktop\oauth_project>  </pre>	
+                                    </div>
+                                    <h5>when running the following</h5>
+                                    <div class="code-container">
+                                        <pre tabindex="1"class="copy-code">
+    \venv\Scripts\activate</pre>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fc answer">
+                                <div class="fi logo-icon-container">
+                                    <img class="fi logo" src="images/logo-icon.png" alt="">
+                                </div>
+                                <div class="fi fcol answer-txt">
+                                    <p>
+    
+                                        The error message you're encountering indicates that PowerShell 
+                                        execution policies are preventing the activation script from
+                                        running in Visual Studio Code. PowerShell execution policies
+                                        are security features that determine what kind of scripts can
+                                        be run on a system.                                    
+                                    </p>
+                                    <p>
+                                        To resolve this issue, you can change the execution policy temporarily
+                                         for the current PowerShell session. Here's how you can do it:
+                                    </p>
+                                    <p>
+                                        1. <strong>Open PowerShell as an administrator:</strong>
+                                        <br>
+                                        To change the execution policy, you need to open PowerShell as
+                                        an administrator. Right-click on the PowerShell icon and choose 
+                                        "Run as administrator."
+
+                                    </p>
+                                    <p>
+                                        2. <strong>Check the current execution policy:</strong>
+                                        <br>
+                                        To see the current execution policy, run the following command:
+                                    </p>
+                                    <div class="code-container">
+                                    <pre tabindex="1" class="copy-code answer-python">
+Get-ExecutionPolicy</pre>	
+                                    </div>
+                                    <p class="r">
+                                        It will likely return "Restricted."
+                                    </p>
+                                    <p>
+                                        3. <strong>Change the execution policy for the current session:</strong>
+                                        Run the following command to change the execution policy for the current
+                                        session to "RemoteSigned" (or another appropriate setting for your needs):
+                                    </p>
+                                    <div class="code-container">
+                                        <pre tabindex="1"class="copy-code">
+Set-ExecutionPolicy RemoteSigned -Scope Process</pre>	
+                                    </div>
+                                    <p>
+                                        This command sets the execution policy to allow locally created and signed scripts to run.
+                                    </p>
+                                    <p>
+                                        4. <strong>Activate your virtual environment:</strong>
+                                        <br>
+                                        After changing the execution policy, you can try activating your 
+                                        virtual environment again using the
+                                        <code>.\venv\Scripts\activate</code> command in the PowerShell session.
+                                    </p>
+                                    <div class="code-container">
+                                        <pre tabindex="1"class="copy-code">
+.\venv\Scripts\activate</pre>	
+                                    </div>    
+                                    <p>
+                                        It should now work without the "cannot be loaded because running 
+                                        scripts is disabled" error.
+                                    </p>
+                                    <p>
+                                        5. <strong>Deactivate the virtual environment:</strong>
+                                        <br>
+                                        After you're done working in the virtual environment, you can deactivate
+                                         it as usual using the deactivate command.
+                                    </p>   
+                                    <p>
+                                        6. <strong>Reset the execution policy (optional):</strong>
+                                        <br>
+                                        After you've finished working with your virtual environment,
+                                         you can reset the execution policy to its original value if desired.
+                                          To reset it, run the following command:
+                                    </p>                             
+                                    <div class="code-container">
+                                        <pre class="copy-code">
+Set-ExecutionPolicy Restricted -Scope Process</pre>	
+                                    </div>
+                                    <p>
+                                        This will revert the execution policy to its previous setting, which is more secure.
+                                    </p>
+                                    <p class="r">Keep in mind that changing the execution policy to "RemoteSigned" or any other less restrictive policy
+                                        temporarily for a specific session can be a security risk, so it's a good practice to reset it to its original value
+                                        after you've completed your work in the virtual environment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Python -> VS Code (Errors)- OAUTH Security Error vs code -->
+                        <div class="fi fcol question-container">
+                            <h4>OAUTH Security Error vs code</h4>
+                            <div tabindex="1" class="fc question">
+                                <div class="fi ts-icon-container">
+                                    <img class="fi logo" src="images/ts-icon.png" alt="">
+                                </div>
+                                <div class="fi fcol question-txt">
+                                    <h5 tabindex="1" class="the-question"><strong>question:</strong>
+                                        why am i getting this error "                                    
+                                        <div class="code-container">
+                                        <pre class="copy-code vs-code-console">
+c:/Users/mtoma/ripts/Activate.ps1
+<span class="r">& : File C:\Users\mtoma\Desk 
+top\oauth_project\venv\Scrip 
+ts\Activate.ps1 cannot be    
+loaded because running       
+scripts is disabled on this  
+system. For more 
+information, see 
+about_Execution_Policies at  
+https:/go.microsoft.com/fwli 
+nk/?LinkID=135170.
+At line:1 char:3
++ & c:/Users/mtoma/Desktop/o 
+auth_project/venv/Scripts/Ac 
+tivate.ps1
++   ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo
+    : SecurityError: (:) [
+  ], PSSecurityException
+    + FullyQualifiedErrorId
+    : UnauthorizedAccess  </span></pre>	
+                                    </div>
+                                    <h5> in vs code when running  the following python script</h5>
+                                    <div class="code-container">
+                                        <pre tabindex="1"class="copy-code">
+from google_auth_oauthlib import InstalledAppFlow
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+import json
+import os
+
+flow = InstalledAppFlow.from_client_secrets_file(
+    'client_secret.json',
+    scopes=['https://www.googleapis.com/auth/youtube.readonly']
+)
+flow.run_local_server(port=8080)
+
+credentials = flow.credentails
+
+print(credentials.to_json())</pre>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fc answer">
+                                <div class="fi logo-icon-container">
+                                    <img class="fi logo" src="images/logo-icon.png" alt="">
+                                </div>
+                                <div class="fi fcol answer-txt">
+                                    <p>
+                                        The error you're encountering is not related to your Python
+                                        script but rather a security policy issue in PowerShell, which is
+                                        preventing you from running the activation script for your virtual
+                                        environment. This issue occurs when the execution policy for
+                                        PowerShell is set to a level that doesn't allow running scripts.                                    
+                                    </p>
+                                    <p>
+                                        To resolve this issue, you can change the execution policy for PowerShell to allow running scripts. Here's how you can do it:
+                                    </p>
+                                    <p>
+                                        1. Open PowerShell with administrator privileges. To do this, search for "PowerShell" in the Windows Start menu, right-click
+                                         on "Windows PowerShell," and select "Run as administrator."
+                                    </p>
+                                    <p>
+                                        2. In the elevated PowerShell window, you can check the current execution policy using the following command:
+                                    </p>
+                                    <div class="code-container">
+                                    <pre tabindex="1" class="copy-code answer-python">
+Get-ExecutionPolicy</pre>	
+                                    </div>
+                                    <p class="r">
+                                        It will likely return "Restricted."
+                                    </p>
+                                    <p>
+                                        3. To change the execution policy to allow running scripts, 
+                                        you can use the following command:
+                                    </p>
+                                    <div class="code-container">
+                                        <pre tabindex="1"class="copy-code">
+Set-ExecutionPolicy RemoteSigned</pre>	
+                                    </div>
+                                    <p>
+                                        This command sets the execution policy to "RemoteSigned," which 
+                                        allows you to run scripts that are locally created. You might be prompted
+                                        to confirm this change; confirm it by typing "Y" and pressing Enter.
+                                    </p>
+                                    <p>
+                                        After changing the execution policy, you should be able to activate your 
+                                        virtual environment and run your Python script without encountering the
+                                        script execution error
+                                    </p>                      
+                                    <p class="r">
+                                        Please note that changing the execution policy can have security implications, 
+                                        so it's essential to understand the risks and ensure that you trust the scripts
+                                        you run. In this case, you are trying to activate a virtual environment, which 
+                                        is generally safe to run.
+                                    </p>             
+                                    <p>
+                                        Once you've changed the execution policy, you can try running your Python script again in Visual Studio Code or PowerShell, and it should work without the script execution policy error.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            
+        </div>
+                
+                
+        <!-- Medent -->
+        <div class="fcol topic-container">  
+            <h2><a id="medent" tabindex="1"  href="#"class='drop-topic '>Medent</a></h2>
+            <div class="fcol subtopics-container ">
+                <h3><a tabindex="1" href="#" class="subdrop-topic">python</a></h3>
+                <div class="fcol subquestions-containers   ">           
+                    <!-- Python -> json - format json better -->
+                    <div class="fi fcol question-container">
+                        <div tabindex="1" class="fc question">
+                            <div class="fi ts-icon-container">
+                                <img class="fi logo" src="images/ts-icon.png" alt="">
+                            </div>
+                            <div class="fi fcol question-txt">
+                                <h5 tabindex="1" class="the-question"><strong>question:</strong>
+                                    Can i use python with the Medent api?
+                                </h5>
+                            
+                            </div>
+                        </div>
+                        <div class="fc answer">
+                            <div class="fi logo-icon-container">
+                                <img class="fi logo" src="images/logo-icon.png" alt="">
+                            </div>
+                            <div class="fi fcol answer-txt">
+                                <p>
+                                    As of my last knowledge update in September 2021, I'm not aware of any
+                                    specific "Medent API." However, if Medent has developed an API
+                                    (Application Programming Interface) to allow developers to interact with 
+                                    their software or services, and if it's publicly available, you can likely 
+                                    use Python or any other programming language to interact with it.
+                                </p>
+                                <p>
+                                    Here's a general guideline on how you might approach using an API with Python:
+                                </p>
+                            
+                                <ol tabindex="1">
+                                    <li><strong>Documentation</strong>: Obtain the API documentation from Medent. This documentation will 
+                                        outline the available endpoints, required parameters, authentication methods, and expected responses.
+                                    </li>
+                                    <li><strong>Authentication</strong>: Most APIs require some form of authentication. This might involve 
+                                        obtaining an API key, token, or other credentials from Medent. This information will be needed to 
+                                        authenticate your requests.
+                                    </li>
+                                    <li><strong>HTTP Requests</strong>: Use Python's built-in libraries like <code><q>requests</q></code> or 
+                                        third-party libraries like <code><q>httpx</q></code> to make HTTP requests to the API endpoints. You'll typically make requests like GET, POST, PUT, or 
+                                        DELETE to interact with the API.
+                                    </li>
+                                    <li><strong>Data Handling</strong>: You'll likely send data to the API (in the case of POST or PUT requests) and receive data back (in the response). Python's <code><q>json</q></code> library
+                                        can be useful for handling JSON data
+                                    </li>
+                                    <li><strong>Error Handling</strong>: Handle errors properly by checking response status codes and handling exceptions
+                                    </li>
+                                    <li>Testing: During development, use tools like <code><q>curl</q></code> or API testing tools like 
+                                        <a target="_blank" tabindex="1" href="https://www.postman.com/">Postman</a>
+                                        to verify your requests and responses before implementing them in your Python code.
+                                    </li>
+                                </ol>
+                                <p>
+                                    Here's a basic example of using Python's <code><q>requests</q></code> library to
+                                    make a GET request to an API endpoint (replace <code><q>API_URL</q></code> with the actual API URL):
+                                </p>
+                                <div class="code-container">
+                                <pre tabindex="1" class="copy-code answer-python">
+import requests
+
+API_URL = "https://api.medent.com/some_endpoint"
+headers = {
+    "Authorization": "Bearer YOUR_TOKEN"
+}
+
+response = requests.get(API_URL, headers=headers)
+
+if response.status_code == 200:
+    data = response.json()
+    # Process the data
+else:
+    print("Request failed with status code:", response.status_code)
+    print("Response content:", response.content)
+Keep in mind that APIs can change or be updated, so it's important to refer to the latest documentation provided by Medent and adapt your code accordingly. Additionally, if there have been developments related to the Medent API after September 2021, I wouldn't be aware of those changes.
+
+                                </pre>	
+                                </div>
+                  
+                                <p tabindex="1">
+                                    Keep in mind that APIs can change or be updated, so it's important to refer to the latest 
+                                    documentation provided by Medent and adapt your code accordingly. Additionally, if there have been
+                                    developments related to the Medent API after September 2021, I wouldn't be aware of those changes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3><a tabindex="1" href="#" class="subdrop-topic">OAuth</a></h3>
+                <div class="fcol subquestions-containers   ">           
+                    <!--  -->
+                    <div class="fi fcol question-container">
+                        <div tabindex="1" class="fc question">
+                            <div class="fi ts-icon-container">
+                                <img class="fi logo" src="images/ts-icon.png" alt="">
+                            </div>
+                            <div class="fi fcol question-txt">
+                                <h5 tabindex="1" class="the-question"><strong>question:</strong>
+                         tbd
+                                </h5>
+                            
+                            </div>
+                        </div>
+                        <div class="fc answer">
+                            <div class="fi logo-icon-container">
+                                <img class="fi logo" src="images/logo-icon.png" alt="">
+                            </div>
+                            <div class="fi fcol answer-txt">
+                                <p>tbd</p>
+                                <ol tabindex="1">
+                                    <li><strong>Documentation</strong>: Obtain the API documentation from Medent. This documentation will 
+                                        outline the available endpoints, required parameters, authentication methods, and expected responses.
+                                    </li>
+                                    <li><strong>Authentication</strong>: Most APIs require some form of authentication. This might involve 
+                                        obtaining an API key, token, or other credentials from Medent. This information will be needed to 
+                                        authenticate your requests.
+                                    </li>
+                                    <li><strong>HTTP Requests</strong>: Use Python's built-in libraries like <code><q>requests</q></code> or 
+                                        third-party libraries like <code><q>httpx</q></code> to make HTTP requests to the API endpoints. You'll typically make requests like GET, POST, PUT, or 
+                                        DELETE to interact with the API.
+                                    </li>
+                                    <li><strong>Data Handling</strong>: You'll likely send data to the API (in the case of POST or PUT requests) and receive data back (in the response). Python's <code><q>json</q></code> library
+                                        can be useful for handling JSON data
+                                    </li>
+                                    <li><strong>Error Handling</strong>: Handle errors properly by checking response status codes and handling exceptions
+                                    </li>
+                                    <li>Testing: During development, use tools like <code><q>curl</q></code> or API testing tools like 
+                                        <a target="_blank" tabindex="1" href="https://www.postman.com/">Postman</a>
+                                        to verify your requests and responses before implementing them in your Python code.
+                                    </li>
+                                </ol>
+                                <p>
+                                    Here's a basic example of using Python's <code><q>requests</q></code> library to
+                                    make a GET request to an API endpoint (replace <code><q>API_URL</q></code> with the actual API URL):
+                                </p>
+                                <div class="code-container">
+                                <pre tabindex="1" class="copy-code answer-python">
+import requests
+
+API_URL = "https://api.medent.com/some_endpoint"
+headers = {
+    "Authorization": "Bearer YOUR_TOKEN"
+}
+
+response = requests.get(API_URL, headers=headers)
+
+if response.status_code == 200:
+    data = response.json()
+    # Process the data
+else:
+    print("Request failed with status code:", response.status_code)
+    print("Response content:", response.content)
+Keep in mind that APIs can change or be updated, so it's important to refer to the latest documentation provided by Medent and adapt your code accordingly. Additionally, if there have been developments related to the Medent API after September 2021, I wouldn't be aware of those changes.
+
+                                </pre>	
+                                </div>
+                  
+                                <p tabindex="1">
+                                    Keep in mind that APIs can change or be updated, so it's important to refer to the latest 
+                                    documentation provided by Medent and adapt your code accordingly. Additionally, if there have been
+                                    developments related to the Medent API after September 2021, I wouldn't be aware of those changes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        
+    </main>
+</body>
+</html>

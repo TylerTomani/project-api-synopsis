@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    margin: 0 5%;
+}
+.tutorials-container > .fc {
+    justify-content: space-between;
+}
+.tutorial-container {
+    border: 1px solid black;
+}
+.tutorial-container > h3 {
+    font-size: 1rem;
+    margin-bottom: 2.5%;
+}
+.tutorial-container > a{
+    display: inline-block;
+    width: 100%;
+}
+.tutorial-container > a:active,.tutorial-container > a:focus{
+    /* box-shadow: -4Px -1px 5px 6px rgb(199, 131, 82); */
+    box-shadow: -2px -1px 5px 6px blue;
+    /* border: 20px solid saddlebrown; */
+}

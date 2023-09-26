@@ -1,0 +1,28 @@
+.b{color:blue}
+.lc{color:cyan}
+.m{color:magenta}
+.o{color:orange}
+.r {color:red}
+.l{color: lime;}
+.lc {color: lightcyan;}
+/* .n {color: m} */
+
+.stuck {
+    box-shadow: 0px 0px 4px 2px red;
+    border: none;
+}
+
+.br1 {
+    border: 1px solid red;
+}
+.br2 {
+    border: 2px solid red;
+}
+.rbshadow {
+    box-shadow: 0 0 4px 4px red;
+}
+
+
+.home-link > a:active,.home-link > a:focus{
+    box-shadow: 0px 0px 10px 2px orange;
+}

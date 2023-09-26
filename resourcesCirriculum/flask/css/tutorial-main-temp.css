@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    border: 1px dashed blue;
+    margin: 0 2.5%;
+}
+.topic-container > header {
+    display: flex;
+}
+.topic-container > header > .img-container > img{
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.topic-container > header > .title-container {
+    flex-basis: 45%;
+}
+.topic-container > header > .title-container > h2 > a.title{
+    display: inline-block;
+    background-color: white;
+    padding: 0 2.5%;
+    padding-bottom: .5%;
+    text-decoration: none;
+    color:black;
+}
+
+.topic-container > header > .img-container{
+    flex-basis: 45%;
+}
+.topic-container > header > .img-container > img{
+    border-radius: 6px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.5%
+}
+.step {
+    display: flex;
+}
+
+.step > .text-container {
+    flex-basis: 47.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.75% ;
+    background-color: white;
+    margin:2.5%;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+.step > .text-container > h3 {
+    align-self: flex-start;
+}
+.error {
+    box-shadow: 1px -1px 16px  red !important;
+}
+.step > .text-container:active,.step > .text-container:focus{
+    box-shadow: 1px -1px 16px  blue;
+}
+.copy-code:active,.copy-code:focus{
+    box-shadow: 1px -1px 8px  blue !important;
+}
+.step > .error:active, .step > .error:focus{
+    box-shadow: -1px -5px 20px red !important;
+}
+.step > .text-container > p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.step > .video-container,
+.step > .img-container {
+    flex-basis: 47.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text-container > .img-container > img{
+    width: 75%;
+}
+.step > .video-container > video,
+.step > .img-container > img,
+.topic-container > header > .img-container > img{
+    border: 1px solid black;
+    width: 80%;
+}
+
+
+/* Colors */
+.r{color:red}
+.m{color:magenta}
+.b{color:blue}
+.g{color:green}
+
+.hide {
+    display: none ;
+}
+#show {
+    display: inline-block !important;
+}
+.show {
+    display: inline-block !important;
+}
+
+.code-container > pre.copy-code{
+    border: 1px solid black;
+    font-size: .85rem;   
+    padding: 2% ;
+    /* width: 100%; */
+    max-width: 750px;
+    overflow-x: scroll;
+    display: inline-block;
+}
+.request {
+    color: lightskyblue;
+    font-weight: 1000;
+    font-size: 130%;
+    text-shadow: 1px 1px darkslategray;
+}
+
+.build,
+.build:visited {
+    color: blue
+}
+.channels,
+.channels:visited,
+.search,
+.search:visited {
+    color: magenta
+}
+.list,
+.list:visited {
+    color: orange
+}
+.list-param {
+    color: green
+}
+
+.ou1{border-bottom: 1px solid orange;}
+.ou2{border-bottom: 2px solid orange;}
+.hide {
+    display: none;
+}
+.show {
+    display: inline-block;
+}

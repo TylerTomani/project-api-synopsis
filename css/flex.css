@@ -1,0 +1,18 @@
+
+.flex,
+.fc {
+    display: flex;
+    flex-wrap: wrap;
+}
+.fcol {
+    display: flex;
+    flex-direction: column;
+}
+.fc {
+    gap: 1rem
+}
+.fc > .fi {
+    flex-basis: 45%;
+    /* border: 1px dashed black; */
+    
+}

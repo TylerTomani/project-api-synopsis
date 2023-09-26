@@ -1,0 +1,10 @@
+.sm-txt {font-size: .9rem;}
+.xsm-txt {font-size: .75rem;}
+.xxsm-txt {font-size: .5rem;}
+/* Borders */
+.rb1{border: 1px solid red;}
+.rb2{border: 2px solid red;}
+.rb3{border: 3px solid red;}
+.rb4{border: 4px solid red;}
+/* Box Shadows */
+/* .rbs{box-shadow: -1px -5px 20px red;} */

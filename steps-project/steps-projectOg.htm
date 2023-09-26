@@ -1,0 +1,350 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-steps</title>
+    <link rel="stylesheet" href="css/steps-project.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <script module src="../js/home-link-focus.js" defer></script>
+
+    <script src="../js/partFocus-tutorial.js" defer></script>
+    <!-- <script src="../js/loadpageNewTab.js" defer></script> -->
+    <script src="../js/copy-code.js" defer></script>
+    <link rel="stylesheet" href="../css/copy-code.css">
+    <!-- <script  module src="../js/playEnlargeVid.js" defer></script> -->
+    <script module src="js/step-dropPart.js" defer></script>
+    <script src="js/step-stepFocus.js" defer></script>
+    <script module src="js/step-enlargeImg.js" defer></script>
+    <script module src="js/step-col-enlargeImg.js" defer></script>
+    
+    <script module src="js/step-col-answer.js" defer></script>
+    <script src="js/step-col-addTabIndex.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="fi home-link">
+            <a tabindex="1" href="../index.htm">home</a>
+        </div>
+        <div class="fi page-title">
+            <h1>Project - Steps </h1>
+        </div>
+    </header>
+    <main>
+        <!-- Part 1 -->
+        <div class="part">
+            <a id="part01" tabindex="1" href="#" class="dropPart"><h2>Part 1 - ChatGpt Convo: "Use OAuth 2.0 with FHIR" </h2></a>
+            <div class="steps-container   ">
+                <!-- 01    How do i use oauth 2.0 with the fhir api -->
+                <div class="step-col ">
+                    <div  tabindex="1" class="question-txt stuck">
+                        <h3>01 </h3>
+                        <img src="../chatGpt-questions/images/ts-icon.png" alt="">
+                        <p >
+                            How do i use oauth 2.0 with the fhir api
+                        </p>
+                    </div>
+                    <div tabindex="1" class="answer-container  ">
+                        <img src="../chatGpt-questions/images/logo-icon.png" alt="">
+                        <div class="answer-txt">
+                            <p>
+                                Using OAuth 2.0 with the FHIR (Fast Healthcare Interoperability Resources) API involves securing access to
+                                FHIR resources by authenticating and authorizing clients. OAuth 2.0 is a common protocol for handling authorization
+                                and authentication in web applications and APIs. To use OAuth 2.0 with the FHIR API, follow these general steps:                            
+                            </p>
+                            <!-- 1. -->
+                            <ul class="br1">
+                                <li>1.
+                                    <strong class="r">Register Your Application</strong>
+                                    <p>First, you'll need to register your application with the FHIR server or the healthcare organization's authorization server (if they use one). This typically involves creating a new application record and obtaining client credentials (client ID and client secret). These credentials will be used to identify your application to the authorization server</p>
+                                </li>
+                            </ul>
+                            <p class="my-question r">
+                                In the medent Documentation
+                                <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc7591#section-3.1:~:text=%22OpenID%20Connect%20Dynamic%20Client%0A%20%20%20Registration%201.0%22
+                                ">section 1. ""OpenID Connect Dynamic Client Registration 1.0" </a>, 
+                                it directs you to this source <a tabindex="_blank" href="https://datatracker.ietf.org/doc/html/rfc7591#ref-OpenID.Registration:~:text=http%3A//openid.net/specs/%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20openid%2Dconnect%2Dregistration%2D1_0.html
+                                ">[OpenID.Registration]</a> &rarr; <a target="_blank" href="https://openid.net/specs/openid-connect-registration-1_0.html">openid.net</a> 
+                                <br>
+                                I am getting stuck here 
+                                <a target="_blank" href="
+                                https://openid.net/specs/openid-connect-registration-1_0.html#:~:text=This%20specification%20defines%20the%20following%20additional%20terms%3A">'Client Registration</a>
+                                <br>
+                                And also to <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc7591#section-3.1:~:text=User%20Managed%0A%20%20%20Access-,(UMA)%20Profile%20of%20OAuth%202.0%22,-%5BUMA%2DCore
+                                ">UMA - "User Managed Access" (UMA-Core)</a>, which leads to <a target="_blank" href="https://datatracker.ietf.org/doc/html/draft-hardjono-oauth-umacore-13
+                                ">draft-hardjono-oauth-umacore-13</a>,
+                                <br>
+                                I am getting stuck here 
+                                <a target="_blank" href="https://datatracker.ietf.org/doc/html/draft-hardjono-oauth-umacore-13#:~:text=In%20order%20to,in%20Figure%201
+                                ">'two purposed-built apis'</a>
+                                a bit, but continued with what Chat Gpt provided
+                            </p>
+                            <!-- 2. 3.  -->
+                            <ul>
+                                <li>
+                                    2. <strong> Choose an OAuth 2.0 Flow:</strong>
+
+                                    OAuth 2.0 defines several grant types or flows that specify how a client can obtain an access token. The choice of flow depends on your application's requirements.
+                                    Common flows include:
+                                    <ul>
+                                        <li><strong>Authorization Code Flow (with PKCE):</strong> Suitable for web and mobile apps where the client has a backend server.</li>
+                                        <li><strong>Client Credentials Flow:</strong> Suitable for server-to-server communication.</li>
+                                        <li><strong>Implicit Flow (deprecated):</strong> Previously used for browser-based apps but not recommended due to security concerns.</li>
+                                    </ul>
+                                </li>
+                                <li class="br1">
+                                    3. <strong class="r"> Obtain an Access Token:</strong>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            Depending on the chosen OAuth 2.0 flow, you will need to make a request to the authorization server's token endpoint to exchange the client credentials for an access token.
+                                        </li>
+                                        <li>Ensure your request includes any required parameters, such as scopes that specify the level of access you need.</li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <p class="my-question r">
+                                Can't figure how to properly use OAUTH 2.0 with medent,
+                                I would like to go over OAUTH with google drive if possible, because I can not 
+                                seem to overcome this hurdle
+                            </p>
+                            <!-- 4. -->
+                            <ul class="br1">
+                                <li>
+                                    4. <strong>Use the Access Token:</strong>
+                                    <ul>
+                                        <li>Once you have the access token, include it in the Authorization header of your FHIR API requests. The header typically looks like this:</li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+                            <div class="code-container">
+                                <pre class="copy-code">
+Authorization: Bearer {access_token}</pre>	
+                            </div>
+                            <p>
+                                Replace {access_token} with the actual access token you received.
+                            </p>
+                            <p class="my-question r">
+                                I believe I got this, but I was doing so much and didn't keep good documentation
+                                I'm currently trying to figure out how I registered or if I did with FHIR,
+                            </p>
+                            <!-- 5 -->
+                            <ul>
+                                <li>
+                                    5. <strong>Access FHIR Resources:</strong>
+                                    With a valid access token, you can now access the FHIR resources by making HTTP requests to the FHIR API endpoints (e.g., GET for reading, POST for creating, PUT for updating, and DELETE for deleting).
+                                </li>
+                            </ul>
+                            <!-- 6. 7. ... -->
+                            <p class="r">
+                                This is somewhere in my script
+                            </p>
+                            <p>
+                                6. <strong>Handle Token Expiry and Refresh (if applicable):</strong>
+                                <br>
+Access tokens usually have a limited lifetime. Be prepared to handle token expiry by either refreshing the token (if using a flow that supports it) or requesting a new token.
+                                <br>
+                                7. <strong>Handle Authorization Errors:</strong>
+                                <br>
+Ensure your application can handle authorization errors gracefully. If the access token is invalid or expired, you may need to reauthenticate and obtain a new token.
+                                <br>
+                                8. <strong>Logging and Monitoring:</strong>
+Implement logging and monitoring to track API requests, token usage, and any potential issues for troubleshooting and auditing.
+<br>
+Security and Compliance:
+Be aware of security best practices and compliance requirements (e.g., HIPAA in healthcare) when handling sensitive health data.
+Remember that the specifics of using OAuth 2.0 with a FHIR API can vary depending on the FHIR server's implementation and the authorization server used. Always refer to the documentation provided by the FHIR server or healthcare organization for detailed instructions on how to integrate OAuth 2.0 authentication with their specific API.
+
+
+                            </p>
+                        </div>
+                    </div>
+              
+                </div>
+                <!-- 02 How do i do the above with python -->
+                <div class="step-col ">
+                    <div autofocus  tabindex="1" class="question-txt ">
+                        <h3>02</h3>
+                        <img src="../chatGpt-questions/images/ts-icon.png" alt="">
+                        <p >
+                            How do i do the above with python
+                        </p>
+                    </div>
+                    <div tabindex="1" class="answer-container  ">
+                        <img src="../chatGpt-questions/images/logo-icon.png" alt="">
+                        <div class="answer-txt">
+                            <p>
+                                To use OAuth 2.0 with a FHIR API in Python, you can follow these general steps:
+                            </p>
+                            <!-- 1. -->
+                            <ul>
+                                <li>
+                                    1. <strong>Install Necessary Libraries:</strong>
+                                    <br>
+                                    You may need to install libraries like requests for making HTTP requests and oauthlib for OAuth 2.0 support. You can install them using pip:
+                                </li>
+                            </ul>
+                            <div class="code-container">
+                                <pre class="copy-code">
+pip install requests oauthlib</pre>	
+                            </div>
+                            <!-- 2. -->
+                            <ul class="rshadow">
+                                <li>
+                                    2. <strong>Register Your Application:</strong>
+                                    <br>
+                                    Follow the documentation of the FHIR server or the healthcare organization to register your application and obtain the client credentials (client ID and client secret).
+                                </li>
+                            </ul>
+                            <p class="r">Struggling, I did this correctly at one point, but I made a mess with my scripts</p>
+                            <p class="r">
+                                visit <a target="_blank" href="https://www.hl7.org/fhir/documentation.html">hl7.org/fhir/documentation</a>
+                                to review how to with the following code provided.
+                            </p>
+                            <p>
+                                <strong>I believe the endpoint for the FHIR goes into <code><span class="m">authorization_base_url</span> parameter</code></strong>
+                            </p>
+                            <p class="r">
+                                Currently trying to find it in my scriptS
+                            </p>
+                            <!-- 3. -->
+                            <ul>
+                                <li>
+                                    3. <strong>Choose an OAuth 2.0 Flow:</strong>
+                                    <br>
+                                    Depending on your application's needs, choose an OAuth 2.0 flow
+                                     and implement it in Python. For example, if you are using the 
+                                     Authorization Code Flow with PKCE, you can use libraries like <code><q>authlib</q></code>.
+                                </li>
+                            </ul>
+                            <p>
+                                <span class="r">Not sure what </span>
+                                PKCE <span class="r">is</span>
+                            </p>
+                            <!-- 4. -->
+                            <ul>
+                                <li>
+                                    4. <strong>Obtain an Access Token:</strong>
+                                    <span class="r">Haven't gotten far enough into an api to use access tokens</span>
+                                    Use the chosen OAuth 2.0 library to obtain an access token by making a request to the token endpoint. Here's an example using authlib for Authorization Code Flow with PKCE:
+                                </li>
+                            </ul>
+                            <div class="code-container">
+                                <pre class="copy-code">
+from authlib.integrations.requests_client import OAuth2Session
+
+# Replace these with your actual credentials and URLs
+client_id = 'your_client_id'
+client_secret = 'your_client_secret'
+authorization_base_url = '<span class="m">FHIR enpoint URL here I believe</span> '
+token_url = 'https://example.com/oauth/token <span class="r">I don't understand how to get tokens yet</span> '
+
+session = OAuth2Session(client_id, client_secret, redirect_uri='your_redirect_uri')
+
+authorization_url, state = session.create_authorization_url(authorization_base_url)
+print('Please visit this URL to authorize your application:', authorization_url)
+
+# After authorization, exchange the code for an access token
+token = session.fetch_access_token(token_url)
+access_token = token['access_token']
+</pre>	
+                            </div>
+                            <!-- 5. -->
+                            <ul>
+                                <li>
+                                    5. <strong>Use the Access Token:</strong>
+                                    <br>
+                                    Include the access token in the Authorization header of your FHIR API requests using the requests library:
+                                </li>
+                            </ul>
+                            <div class="code-container">
+                                <pre class="copy-code">
+import requests
+
+# Replace with your FHIR API URL and the desired FHIR resource endpoint
+fhir_api_url = 'https://example.com/fhir/api'
+fhir_resource_endpoint = '/Patient/123'  # Replace with the specific resource you want to access
+
+headers = {
+    'Authorization': f'Bearer {access_token}'
+}
+
+response = requests.get(f'{fhir_api_url}{fhir_resource_endpoint}', headers=headers)
+
+if response.status_code == 200:
+    # Process the FHIR resource here
+    fhir_data = response.json()
+else:
+    print('Error:', response.status_code)
+</pre>	
+                            </div>
+                            <!-- .6 .7 ... -->
+                            <ul>
+                                <li>
+                                    6. <strong>Handle Token Expiry and Refresh (if applicable):</strong>
+                                    If your access token has a limited lifetime, implement logic to handle token refresh based on the library you're using.
+                                    <br>
+                                    7. <strong>Error Handling and Logging:</strong>
+                                    Implement error handling and logging to handle various scenarios, such as token expiration and API errors.
+                                    <br>
+                                    8. <strong>Security and Compliance:</strong>
+                                    Ensure your code complies with security best practices and any compliance requirements applicable to healthcare data.
+                                    <br>
+                                    9. <strong>Testing and Monitoring:</strong> 
+                                    Thoroughly test your integration and implement monitoring to track API usage and errors.
+                                </li>
+                            </ul>
+                            <p class="mdtxt">
+                                Please note that the specific implementation details may vary based on the OAuth 2.0 library you choose and the FHIR server's implementation. Always refer to the library's documentation and the FHIR server's documentation for any specific configuration or requirements.
+                            </p>
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+        <!-- Part 2 -->
+        <div class="part">
+            <a id="part02" tabindex="1" href="#" class="dropPart"><h2>Part 2 - Asking ChatGpt </h2></a>
+            <div class="steps-container   ">
+        
+                <!-- 01 how do i register my application with the FHIR api-->
+                <div class="step-col ">
+                    <div autofocus  tabindex="1" class="question-txt ">
+                        <h3>01</h3>
+                        <img src="../chatGpt-questions/images/ts-icon.png" alt="">
+                        <p>
+                            how do i register my application with the FHIR api
+                        </p>
+                    </div>
+                    <div tabindex="1" class="answer-container  ">
+                        <img src="../chatGpt-questions/images/logo-icon.png" alt="">
+                        <div class="answer-txt">
+                            <p>
+                                To use OAuth 2.0 with a FHIR API in Python, you can follow these general steps:
+                            </p>
+ 
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- 03 -->
+                <!-- <div class="step">
+                    <div tabindex="1" class="step-txt">
+                        <h3>03</h3>
+                        <p>
+                            TBD <a href="#">Lorem ipsum dolor sit amet consectetur</a>
+                        </p>
+                    </div>
+                    <div class="step-img">
+                        <img src="../placeholder.png" >
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

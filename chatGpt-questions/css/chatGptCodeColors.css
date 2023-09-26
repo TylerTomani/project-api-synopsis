@@ -1,0 +1,11 @@
+.answer-cmd-prompt {
+    background:black;
+    color:white;
+    overflow-x: scroll;
+}
+.c {
+    color:orange;
+}
+.dir {
+    color:red;
+}

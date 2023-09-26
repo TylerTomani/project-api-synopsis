@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* position: relative; */
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    background-color: white;
+    padding: .25% .5%;
+}
+nav > .fi {
+    flex-basis: 45%;
+    display: flex;
+    /* justify-content: space-between; */
+}
+nav > .fi > a.pythonEssentialTraining-link {
+    display: inline-block;
+    justify-self: flex-end;
+    margin-left: 25%;
+}
+nav > .fi > a {
+    padding: 0% 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: .5%;
+    
+}
+main > h2
+.topic-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5% ;
+    margin-top: .5% ;
+}
+
+.topic-container > header {
+    display: flex;
+}
+
+.topic-container > header > .title-container {
+    flex-basis: 45%;
+}
+.topic-container > header > .title-container > h2 > a.title{
+    display: inline-block;
+    background-color: white;
+    padding: 0 2.5%;
+    padding-bottom: .5%;
+    text-decoration: none;
+    color:black;
+}
+
+.topic-container > header > .img-container{
+    flex-basis: 45%;
+}
+.topic-container > header > .img-container > img{
+    border-radius: 6px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.5%
+}
+.step {
+    display: flex;
+}
+
+.step > .text-container {
+    flex-basis: 47.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.75% ;
+    background-color: white;
+    margin:2.5%
+}
+.error {
+    box-shadow: 1px -1px 16px  red !important;
+}
+.step > .text-container:active,.step > .text-container:focus{
+    box-shadow: 1px -1px 16px  blue;
+}
+.step > .error:active, .step > .error:focus{
+    box-shadow: -1px -5px 20px red !important;
+}
+.step > .text-container > p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.step > .video-container,
+.step > .img-container {
+    flex-basis: 47.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.step > .video-container > video,
+.step > .img-container > img,
+.topic-container > header > .img-container > img{
+    border: 1px solid black;
+    width: 80%;
+}
+
+
+/* Colors */
+.r{color:red}
+.m{color:magenta}
+.b{color:blue}
+.g{color:green}
+
+.hide {
+    display: none ;
+}
+#show {
+    display: inline-block !important;
+}
+.show {
+    display: inline-block !important;
+}
+
+.code-container > pre.copy-code{
+    font-size: .85rem;   
+    /* padding: .5% 10%; */
+    padding: 1%;
+    width: 100%;
+    /* padding-left: 2.5%; */
+    display: inline-block;
+}
+
+.build,
+.build:visited {
+    color: blue
+}
+.channels,
+.channels:visited {
+    color: magenta
+}
+.list,
+.list:visited {
+    color: orange
+}
+.list-param {
+    color: green
+}

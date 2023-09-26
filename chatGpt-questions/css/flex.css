@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.flex,
+.fc {display: flex;}
+.fwrap{flex-wrap: wrap;}
+.fc > .fi {flex-basis: 47.5%;}
+.fcol {
+    display: flex;
+    flex-direction: column;
+}
+
+.fc > .video-container,
+.fc > .img-container  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fc > .video-container > video,
+.fc > .img-container  > img{
+    width: 95%;
+    border: 1px solid black;   
+    margin: 2.5%
+}
+/* Justify-content */
+.js{justify-content: flex-start;}
+.jc{justify-content: center;}
+.je{justify-content: flex-end;}
+.jss{justify-self: flex-start;}
+.jsc{justify-self: center;}
+.jse{justify-self: flex-end;}
+
+/* Align-items */
+.as{align-items: flex-start;}
+.ac{align-items: center;}
+.ae{align-items: flex-end;}
+.ass{align-self: flex-start;}
+.asc{align-self: center;}
+.ase{align-self: flex-end;}
+
+
+
+/* Text Flex */
+.fc > .text-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.fc > .text-container > p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    padding: 5%;
+    
+}
+.hide {
+    display: none;
+}
+.show {
+    display: inline-block;
+}

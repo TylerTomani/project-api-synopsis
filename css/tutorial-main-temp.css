@@ -1,0 +1,113 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    display: flex;
+    flex-direction: column;
+}
+.part {
+    /* border: 1px solid black; */
+    margin: 2% 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+.part > .steps-container > .step {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-self: space-around;
+}
+.part > .steps-container > .step > .step-txt{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.part > .steps-container > .step > .step-txt > h3 {
+    align-self: flex-start;
+}
+
+.part > .steps-container > .step > .step-txt,
+.part > .steps-container > .step > .step-img,
+.part > .steps-container > .step > .step-vid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 2.5%;
+    margin: 1% 2.5%;
+    flex-basis: 45%;
+    border: 1px solid orange;
+}
+.part > .steps-container > .step > .step-vid> video,
+.part > .steps-container > .step > .step-img > img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.dropPart:active,.dropPart:focus,.dropPart:hover{
+    box-shadow: 2px 2px 5px 2px blue;
+}
+
+.enlargeImg{
+    position: relative;
+    top: -5%;
+    transform: scale(2);
+    transition: all 1s;
+}
+.denlargeImg {
+    position: static;
+    top:0;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: inline-block;
+}
+
+
+.code-container > pre.copy-code{
+    border: 1px solid black;
+    font-size: .85rem;   
+    padding: 2% ;
+    /* width: 100%; */
+    max-width: 750px;
+    overflow-x: scroll;
+    display: inline-block;
+}
+
+.copied {
+    border: 4px solid whitesmoke;
+    background-color: whitesmoke;
+}
+.background-change {
+    background-color: lightgray;
+}
+.animate {
+    position: relative;
+    margin-right: 50%;
+    transform: scale(3.05);
+    transition: all .3s;
+    z-index: 1;
+}
+.deanimate {
+    position: static;
+    margin-right: 0;
+    transform: scale(1);
+    transition: all .3s;
+    z-index: 0;
+}
+
+footer {
+    border-top: 2px solid black;
+    margin: 0 2.5%;
+    padding-bottom: 5%;
+}

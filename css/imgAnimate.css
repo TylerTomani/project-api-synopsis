@@ -1,0 +1,17 @@
+.background-change {
+    background-color: lightgray;
+}
+.animate {
+    position: relative;
+    margin-right: 50%;
+    transform: scale(3.05);
+    transition: all 1.3s;
+    z-index: 1;
+}
+.deanimate {
+    position: static;
+    margin-right: 0;
+    transform: scale(1);
+    transition: all 1.3s;
+    z-index: 0;
+}
