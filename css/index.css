@@ -1,84 +1,124 @@
-header {
+* {margin: 0;padding: 0; box-sizing: border-box;}
+.rbshadow {
+    /* box-shadow: 0 0 4px 4px red; */
+}
+main {
+    
+}
+header.home-page-header {
     display: flex;
+    border-bottom: 2px solid blue;
+    height: 12vh;
+}
+header.home-page-header > .fi.synopsis ul {
+    display: flex;
+    flex-direction: column;
+}
+header.home-page-header > .fi.synopsis ul {
+    margin-left: 5%;
+}
+.home-page-header > .page-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-page-header > .page-logo img {
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    border: 4px solid blue;
+    max-height: 100px;
+}
+main {
+    /* border: 1px red solid; */
+}
+header {
+    /* display: flex; */
     /* border-bottom: 2px solid black; */
-    justify-content: space-between;
-    padding: 0 2.5%;
+    /* justify-content: space-between; */
+    /* padding: 0 2.5%; */
     /* align-items: center; */
     
 }
 header > .fi.home-link > a{
-    border: 1px solid black;
-    display: inline-block;
-    font-size: 1.2rem;
+    /* border: 1px solid black; */
+    /* display: inline-block; */
+    /* font-size: 1.2rem; */
     /* justify-self: flex-start; */
 }
-header > .page-title > img{
-    width: 80%;
-}
-.synopsis{
-    width: 50%;
-    border: 1px solid black;
-}
+
 main {
     padding: 0 2.5%;
 }
 main > header {
+    border: 2px solid black;
     display: flex;
-    /* flex-direction: column; */
-    margin: 0 2.5%;
-    margin-top: 1%;
+    /* margin: 0 2.5%; */
+    /* margin-top: 1%; */
     align-items: center;
-    padding: 1.5%;
-    padding-top: .25%;
+    padding: 2.5% 3.5%;
+    padding: 1.25%;
 }
-main > header > * {
-    flex-basis: 45%;
-}
-.topic-container {
-    border: 1px solid black;
-}
-.documentation {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 2.5%;
-}
-.documentation > .fc {
-    display: flex;
-}
-.documentation > .fc > .fi {
-    flex-basis: 45%;
-    /* gap: 1rem; */
-}
-.projects-container > .project > h2{
-    width: 90%;
-    display: inline-block;    
-}
-#questions,
-#stepsProject {
-    width: 100%;
-}
-#questions > h2,
-#stepsProject > h2 {
-    margin-left: 2.5%;
+main > header > p {
+    flex-basis: 65%;
+    margin-right: 2.5%;
 }
 
-#resources {
+.topics-container {
+    /* border: 3px solid blue; */
     display: flex;
     flex-direction: column;
+    margin: 0 2.5%;
 }
-#resources > .topic > .projects-container{
+.topic-container > header {
+    /* font-size: 1.2rem; */
+    padding-left: 2.5%;
+}
+.topics-container > .topic-container {
+    border: 1px solid black;
+    flex-basis: 45%;
+    /* height: 20vh; */
+    margin: .75% 0;
+}
+.topic-container > .topic {
+    width: 100%;
+    
+    /* background-color: grey; */
+}
+.topic-container > .topic > .projects-container{
+    width: 100%;
+}
+.topic-container > .topic > .projects-container > .project {
+    width: 100%;
+}
+.topic-container#documentation > header,
+.topic-container#resources > header{
+    background-color: lightskyblue;
+    border-bottom: 1px solid blue;
+    font-size: 1.02rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.topic-container#resources > .topic > .projects-container {
+    padding: 1% 0;
+    padding-left: 2.5%;
     display: flex;
+
 }
-#resources > .topic > .projects-container > .project{
-    padding: 1%;
+.topic-container#resources > .topic > .projects-container > .project {
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    /* align-items: center; */
-    padding-top: 0;
+    align-items: center;
+    justify-self: center;
+    padding: 1.5% 0;
+    flex-basis: 20%;
+    border: 2px solid blue;
+    /* height: 20vh; */
 }
-#resources > .topic > .projects-container > .project > img{
-    width: 60%;
+.topic-container#resources > .topic > .projects-container > .project img {
+    max-height: 160px;
+    max-width: 160px;
 }
 
 #stepsProject:active,#stepsProject:focus,
@@ -87,15 +127,20 @@ main > header > * {
     border: 3px solid blue;
     box-shadow: 0px 0px 4px 2px blue;
 }
-.project:active,.project:focus{
+.project:active,.project:focus,.project:hover{
     border: 3px solid blue;
-    box-shadow: 0px 0px 10px 2px orange;
+    box-shadow: 0px 0px 10px 2px blue;
 }
 
-.rbshadow {
-    box-shadow: 0 0 4px 4px red;
-}
+
 
 footer {
     margin-bottom: 500px;
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: inline-block;
 }

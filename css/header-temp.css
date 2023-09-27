@@ -1,13 +1,21 @@
+
 body > header {
     display: flex;
     border-bottom: 2px solid black;
     /* justify-content: space-between; */
     padding: 0 2.5%;
+    padding-bottom: 1%;
     align-items: center;
     
 }
-body > header > .fi.home-link > a{
+body > header > .fi.home-link {
     border: 1px solid black;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: .5% 2.5%;
+}
+body > header > .fi.home-link > a{
+    /* border: 1px solid black; */
     display: inline-block;
     font-size: 1.2rem;
     justify-self: flex-start;

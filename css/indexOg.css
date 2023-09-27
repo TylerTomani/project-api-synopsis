@@ -1,0 +1,115 @@
+* {margin: 0;padding: 0}
+main {
+    
+}
+.home-page-header {
+    display: flex;
+}
+.home-page-header > .fi.synopsis ul {
+    display: flex;
+    flex-direction: column;
+}
+.home-page-header > .fi.synopsis ul {
+    margin-left: 5%;
+}
+header {
+    display: flex;
+    /* border-bottom: 2px solid black; */
+    justify-content: space-between;
+    padding: 0 2.5%;
+    /* align-items: center; */
+    
+}
+header > .fi.home-link > a{
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 1.2rem;
+    /* justify-self: flex-start; */
+}
+header > .page-title > img{
+    /* width: 80%; */
+}
+.synopsis{
+    width: 50%;
+    border: 1px solid black;
+}
+main {
+    padding: 0 2.5%;
+}
+main > header {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 0 2.5%;
+    margin-top: 1%;
+    align-items: center;
+    padding: 1.5%;
+    padding-top: .25%;
+}
+main > header > * {
+    flex-basis: 45%;
+}
+.topic-container {
+    border: 1px solid black;
+}
+.documentation {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.5%;
+}
+.documentation > .fc {
+    display: flex;
+}
+.documentation > .fc > .fi {
+    flex-basis: 45%;
+    /* gap: 1rem; */
+}
+.projects-container > .project > h2{
+    width: 90%;
+    display: inline-block;    
+}
+#questions,
+#stepsProject {
+    width: 100%;
+}
+#questions > h2,
+#stepsProject > h2 {
+    margin-left: 2.5%;
+}
+
+#resources {
+    display: flex;
+    flex-direction: column;
+}
+#resources > .topic > .projects-container{
+    display: flex;
+}
+#resources > .topic > .projects-container > .project{
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    padding-top: 0;
+}
+#resources > .topic > .projects-container > .project > img{
+    width: 60%;
+}
+
+#stepsProject:active,#stepsProject:focus,
+#questions:active,#questions:focus,#questions:hover,
+.topic-container:active,.topic-container:focus,.topic-container:hover{
+    border: 3px solid blue;
+    box-shadow: 0px 0px 4px 2px blue;
+}
+.project:active,.project:focus{
+    border: 3px solid blue;
+    box-shadow: 0px 0px 10px 2px orange;
+}
+
+.rbshadow {
+    box-shadow: 0 0 4px 4px red;
+}
+
+footer {
+    margin-bottom: 500px;
+}
