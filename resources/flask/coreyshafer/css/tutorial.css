@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+.lgtxt {
+    font-size: 1.1rem;
+}
 body > header {
     display: flex;
     border-bottom: 2px solid black;
@@ -58,15 +61,29 @@ body > header > .page-title > .page-logo > img  {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1% 0;
+    margin: .25% 2.5%;
+    margin-top: 0;
+    padding-top: 0;
 }
-.step-col > .step-txt {
+.steps-container > .step-col > .step-txt {
+    padding: 2.5% 10%;
     border: 1px solid black;
-    padding: 1.5%;
+    padding-top: 3%;
     margin: 1.5% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.step > .step-txt > .part {
+    border: 1px solid purple;
+    width: 100% ;
+
+    margin: 0;
+    padding: 0;
+}
+.step > .part > .steps-container {
+    width: 100%;
+    margin: 0;
 }
 .question-txt {
     font-family:   sans-serif, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;

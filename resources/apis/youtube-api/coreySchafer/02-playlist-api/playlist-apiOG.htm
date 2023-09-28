@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playlist-api</title>
+    <link rel="icon" href="path/to/favicon.ico">
+    <link rel="stylesheet" href="../css/tutorial.css">
+    <link rel="stylesheet" href="../css/imgAnimate.css">
+    <link rel="stylesheet" href="../../css//colors.css">
+    <link rel="stylesheet" href="../css/fontSizeColors.css">
+    <script src="../js/drop-topics.js" defer></script>
+    <script src="../js/playEnlargeVideos.js" defer></script>
+    <script src="../js/stepFocus.js" defer></script>
+    <script src="../../js/copy-code.js"defer></script> 
+    <link rel="stylesheet" href="../../css/copy-code.css">
+    <script src="../../js/enlarge-code-img.js"defer></script>
+</head>
+<body>
+    <a tabindex="1" class="home-link" href="../coreyShafer.htm">home</a>
+    <header>
+        <div class="fi title">
+            <h1>Python YouTube API Tutorial: Calculating the Duration of a Playlist</h1>
+        
+        </div>
+        
+    </header>
+    <nav>
+        <div class="fi tutorial-link">
+            <a tabindex="1" target="_blank" href="https://www.youtube.com/watch?v=coZbOM6E47I&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&start_radio=1">tutorial</a>
+        </div>
+        <div class="fi pythonEssentialTraining-link">
+            <a target="_blank" tabindex="1" href="../../linkedinLearning/learning-paths/gettingStartedWithPython/01-pythonEssentialTraining/index.html">pythonEssentialTraining</a>  
+        </div>
+    
+    </nav>
+    <main>
+        <div class="topic-container">
+            <header>
+                <div class="title-container">
+                    <h2><a  tabindex="1" href="#" class="drop-topic title"> <code>playlist()</code>
+                        </a>
+                    </h2>
+                </div>
+                <div class="fi img-container">
+                    <img src="../../placeholder.png" alt="">
+                </div>
+            </header>
+            <div class="steps-container show ">
+                <!-- Continue with script from -->
+                <div class="step">
+                    <div tabindex="1" class="enlarge-playVid-click text-container">
+                        <p>Continue with script from
+                            <a target="_blank" href="
+                            ../api-gettingStarted/api-gettingStarted.htm">api-getting-started</a>
+                        </p>
+                    </div>
+                    <div class="img-container">
+                        <img src="imagesVideos/00-31.png" alt="">
+                    </div>
+                </div>
+                <!-- You can go to the google-api-python client or google youtube api -->
+                <div class="step">
+                    <div tabindex="1" class="fi fcol enlarge-playVid-click text-container">
+                        <p>
+                            You can go to the <a target="_blank" href="https://googleapis.github.io/google-api-python-client/docs/dyn/youtube_v3.html
+                            ">google api python client</a> doc to find <i>instance methods</i> for  <code>playlists</code>
+                            <br>Or you can google,
+                            <br><a target="_blank " href="https://developers.google.com/youtube/v3/docs/playlists#:~:text=Was%20this%20helpful%3F-,Playlists,-bookmark_border
+                            ">youtube api reference &rarr;playlists</a>
+                        </p>
+                    </div>
+                    <div class="fi video-container">
+                        <video src="imagesVideos/03.mp4"></video>
+                    </div>
+                </div>
+                <!-- We will need the id for a playlist -->
+                <div class="step">
+                    <div tabindex="1" class="fi fcol enlarge-img-click text-container">
+                        <p>
+                            We will need the id for a playlist, it can be found in the URL of the 
+                            playlist
+                            <br>
+                        </p>
+                        <div tabindex="1" class="code-container">
+                            <pre tabindex="1" class="copy-code m">
+osiE80TeTtoQCKZ03TU5fNfx2UY6U4p</pre>	
+                        </div>
+                        <p>
+                            &emsp;But First we need the channel id, which can be found with the code below
+                        </p>
+                    </div>
+                    <div class="fi img-container">
+                        <img src="imagesVideos/01.png"></img>
+                    </div>
+                </div>
+
+                <!-- code youtube.channels() -->
+                <div class="step">
+                    <div class="fi fcol enlarge-img-click text-container">
+                        <div class="code-container">
+                            <pre tabindex="1" class="copy-code">
+from googleapiclient.discovery import build
+api_key = 'AIzaSyB5l6r60V65YzlmcdEPf8en-MMDMDPOXDI'
+youtube = <span class="b">build</span>('youtube','v3',developerKey=api_key)
+
+request = youtube.<span class="m">channels</span>().<span class="list">list</span>(
+        <span class="list-param">part</span>='statistics',
+        <span class="list-param">forUsername</span>='schafer5'
+)
+response = request.execute()
+print(response)
+</pre>
+
+                        </div>
+                    </div>
+                    <div class="fi img-container">
+                        <img src="imagesVideos/02.png"></img>
+                    </div>
+                </div>
+
+                <!-- place the id from the code above as an argument to channelID -->
+                <div class="step">
+                    <div tabindex="1" class="fi fcol enlarge-img-click text-container error">
+                        <p>
+                            Place the <span class="o">id</span> from above and assign it to the <code class="g">channelId</code> argument in the the</a> use <a target="_blank" class="list" href="https://developers.google.com/youtube/v3/docs/channels/list
+                            "><code>list()</code></a> method on the  
+                            <a target="_blank" class="playlist" href="https://developers.google.com/youtube/v3/docs/playlists
+                            "><code>playlists()</code></a>
+                             method
+                        </p>
+                        <div class="code-container">
+                            <pre tabindex="1" class="copy-code o">
+UCCezIgC97PvUuR4_gbFUs5g</pre>	
+                        </div>
+                        <p>
+                            Add "<span class="g">contentDetails</span>" and <span class="g">snippits</span> 
+                            for <code class="g">part</code> argument.
+                        </p>
+                        <p>This will return a dictionary, and the playlist are located within</p>
+                        <code class="yb2">['items']</code>
+                        <p class="r"><span class="g"><i>"snippet"</i></span> doesn't produce the result seen in tutorial </p>
+                    </div>
+                    <div class="fi img-container">
+                        <img src="imagesVideos/04.png"></img>
+                    </div>
+                </div>
+                <!-- Put the youtube.playlists() in .. -->
+                <div class="fc step">
+                    <div autofocus  tabindex="1" class="fi fcol enlarge-img-click text-container">
+                        <p>
+                            Put the <a target="_blank" href="https://developers.google.com/youtube/v3/docs/playlists
+                            ">youtube.<code class="playlist m">playlists()</code></a>
+                             in a explicit variable
+                            like, <code class="b">pl_request</code>, now loop over the <code class="yb2">"items"</code>
+
+                        </p>
+                        <div class="code-container">
+                            <pre tabindex="1" class="copy-code">
+import os 
+from googleapiclient.discovery import build
+os.system('cls')
+api_key = 'AIzaSyB5l6r60V65YzlmcdEPf8en-MMDMDPOXDI'
+youtube = build('youtube','v3',developerKey=api_key)
+<span class="b">pl_request</span> = <span class="b">youtube</span>.<span class="m">playlists</span>().<span class="o">list</span>(
+        <span class="g">part</span>='contentDetails',
+        <span class="g">channelID</span>='UCCezIgC97PvUuR4_gbFUs5g'
+    )
+pl_response = pl_request.execute()
+print(pl_response)
+
+for item in pl_response['items']:
+    print(item)
+    print()
+                </pre>
+                        </div>
+                        <p>
+                            This will, i think, return the first five, api could have changed
+                        </p>
+                    </div>
+                    <div class="fi img-container">
+                        <img src="imagesVideos/05.png"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>         
+
+</body>
+</html>

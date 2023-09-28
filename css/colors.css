@@ -2,7 +2,9 @@
 /* .copy-code > span.b{color:rgb(0,150,240)} */
 .b{color:rgb(0,124,250);font-weight: 800;}
 .lc{color:cyan;font-weight: 800;}
-.m{color:magenta;font-weight: 800;}
+.m{
+    color:magenta !important;
+    font-weight: 800; }
 .o{color:orange;font-weight: 800;}
 .r {color:red;font-weight: 800;}
 .l{color: lime;font-weight: 800;}

@@ -36,7 +36,6 @@ stepTxts.forEach(stepTxt => {
     })
     stepTxt.addEventListener('focusout', e => {        
         console.log('focus out')
-        removeAsTabIndex(e)
         removeElargeAllImgs()
         removeTabToImages()
         delargeAllVideo()
@@ -96,6 +95,7 @@ stepColTxts.forEach(stepColTxt => {
     stepColTxt.addEventListener('focus', e => {
         removeAsTabIndex(e)
         removeTabToImages(e)
+        // removeAsTabIndex()
         removeCopyCodeTabIndex()
       
     })

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00-api-gettingStarted</title>
+    <link rel="stylesheet" href="../css/tutorial.css">
+    <link rel="stylesheet" href="../css/imgAnimate.css">
+    <script src="../js/playEnlargeVideos.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="fi home-link">
+            <a tabindex="1" href="../coreyShafer.htm">home</a>
+        </div>
+        <div class="fi title">
+            <h1>01-Python YouTube API Tutorial: Calculating the Duration of a Playlist</h1>
+            <a href=""></a>
+            <P style="color:red;font-size: 1.4rem;font-weight: bold;">Add left & right arrow while video is enlarge to 
+            fast forward and rewind</P>
+            <p>&</p>
+            <p>Make it so if you click anywhere in the left .fi, the img or video size increases and plays.(Not just the &lt;p> tag)</p>
+        </div>
+    </header>
+    <main>
+        <h2><a tabindex="1" href="#" class="drop-section">Setup - API</a>
+        <br>make this drop section</h2>
+        <!-- Click on Create Projecton the Manage Resources pages, -->
+        <div  class="fc">
+            <div tabindex="1" class="fi enlarge-playVid-click text-container">
+                <p>
+                    Go to,
+                    <br>
+                    <a  target="_blank" href="https://console.cloud.google.com/cloud-resource-manager">https://console.cloud.google.com/cloud-resource-manager</a>
+                    <br>
+                    Click on <q>Create Project</q> on the <q>Manage Resources</q> pages,
+                    <br>(or)
+                    <br>
+                    Click <q>Dashboard</q> and go to to <q>Select A Project</q>
+                </p>
+            </div>
+            <div class="fi video-container">
+                <video src="imagesVideos/00.mp4"></video>
+            </div>
+        </div>
+        <!-- Name the project and click "Create" -->
+        <div class="fc">
+            <div tabindex="1" class="fi enlarge-img-click text-container">
+                <p>
+                    Name the project and click <q>Create</q>
+                </p>
+            </div>
+            <div class="fi img-container">
+                <image src="imagesVideos/01.png"></image>
+            </div>
+        </div>
+        <!-- Go to the "API's & Services" -> "Enable API's & ... -->
+        <div class="fc">
+            <div tabindex="1" class="fi enlarge-playVid-click text-container">
+                <p >
+                    Go to <q>API's & Services</q> &rarr; <q>Enable API's & services</q>,
+                    <br>Then,
+                    <br>
+                    Search for and enable the <a target="_blank" href="https://console.cloud.google.com/marketplace/product/google/youtube.googleapis.com?project=youtube-api-396107">YouTube Data API v3</a>
+                </p>
+            </div>
+            <div class="fi video-container">
+                <video src="imagesVideos/02.mp4"></video>
+            </div>
+        </div>
+        <!-- Click on "Create Credentials" -->
+        <div class="fc">
+            <div tabindex="1" class="fi enlarge-playVid-click text-container">
+                <p>
+              Click on <q>Create Credentials</q>,   
+                </p>
+                
+            </div>
+            <div class="fi video-container">
+                <video src="imagesVideos/04.mp4"></video>
+            </div>
+        </div>
+        <!-- for this api, choose ... -->
+        <div class="fc">
+            <div tabindex="1"  class="fi enlarge-img-click text-container">
+                <p>
+                    for this api, choose   
+                </p>
+                <ul>
+                    <li>The <i>YouTube Data v3</i> api </li>
+                    <li>& <i>Public Data</i></li>
+                    <li>Click <q>Done</q></li>
+                </ul>
+            </div>
+            <div class="fi img-container">
+                <image src="imagesVideos/05.png"></image>
+            </div>
+        </div>
+        <!-- now we have an api key, go to Credentials -->
+        <div class="fc">
+            <div tabindex="1" class="fi enlarge-playVid-click text-container">
+                <p>
+                     now we have an api key, go to <q>Credentials</q> to copy it
+                </p>
+                
+            </div>
+            <div class="fi video-container">
+                <video src="imagesVideos/06.mp4"></video>
+            </div>
+        </div>
+        <div class="fc">
+            <div  tabindex="1" class="fi enlarge-img-click text-container">
+                <p>
+                  Paste the api key into a variable in your script
+                  <br><span style="color:red">Remember</span> delete when not using
+                  unless encrypted,restricted and secure
+                </p>
+            </div>
+            <div class="fi img-container">
+                <image src="imagesVideos/07.png"></image>
+            </div>
+        </div>
+        <h2><a tabindex="1" href="#" class="drop-section">Documentation - <i>google client python api??</i></a></h2>
+        
+    </main>
+</body>
+</html>

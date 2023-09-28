@@ -91,6 +91,7 @@ main > header > p {
 .topic-container > .topic > .projects-container > .project {
     width: 100%;
 }
+.topic-container#myProjects > header,
 .topic-container#documentation > header,
 .topic-container#resources > header{
     background-color: lightskyblue;
@@ -99,6 +100,7 @@ main > header > p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.topic-container#myProjects > .topic > .projects-container ,
 .topic-container#resources > .topic > .projects-container {
     padding: 1% 0;
     padding-left: 2.5%;
@@ -116,6 +118,7 @@ main > header > p {
     border: 2px solid blue;
     /* height: 20vh; */
 }
+.topic-container#myProjects > .topic > .projects-container > .project img,
 .topic-container#resources > .topic > .projects-container > .project img {
     max-height: 160px;
     max-width: 160px;

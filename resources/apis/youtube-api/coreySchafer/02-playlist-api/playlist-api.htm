@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playlist-api</title>
+    <link rel="stylesheet" href="../../../css/flex-questions.css">
+    <link rel="stylesheet" href="../../../css/imgVid.css"/>
+    <link rel="stylesheet" href="../../../css/tutorial.css"/>
+    <link rel="stylesheet" href="../../../../../css/colors.css">
+    <link rel="stylesheet" href="../../../../../css//copy-code.css">
+    <script module src="../../../../../js/home-link-focus.js" defer></script>
+    <script module src="../../../../../js/copy-code.js" defer></script>
+    <script module src="../../../js/letterFocus.js" defer></script>
+    <script module src="../../../js/stepFocusEnlargeImg.js" defer></script>
+    <script module src="../../../js/dropPartFocus.js" defer></script>
+    <script module src="../../../js/playEnlargeVid.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="home-link">
+            <a tabindex="1" href="../../../apis.htm">home&nbsp;-&nbsp;</a>
+        </div>
+        <div class="page-title">
+            <h1>coreyShafer</h1>
+            <h2>Calculate Playlist - Api </h2>
+            <div class="page-logo">
+                <img class="img-logo" src="data:image/jpeg;base64,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
+                " alt="">
+                <a  target="_blank" href="https://www.youtube.com/watch?v=coZbOM6E47I&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&start_radio=1">tutorial</a>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <!-- Part 1 - get channelId for playlist() -->
+        <div class="part">
+            <a id="part01"  tabindex="1" href="#" class="dropPart">Part 1 - get <code>channelId</code> for <code>playlist()</code>
+            </a>
+            <div class="steps-container  ">
+                <!-- 00. Continue with script from -->
+                <div class="step">
+                    <h3>00</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>Continue with script from
+                            <a target="_blank" href="
+                            ../api-gettingStarted/api-gettingStarted.htm">api-getting-started</a>
+                        </p>
+                    </div>
+                    <div class="step-img">
+                        <img src="imagesVideos/00-31.png" alt="">
+                    </div>
+                </div>
+                <!-- 01. You can go to the google-api-python client or google youtube api -->
+                <div class="step">
+                    <div tabindex="1" class="step-txt step-vid playVid-click">
+                        <h3>01.</h3>
+                        <p>
+                            You can go to the <a target="_blank" href="https://googleapis.github.io/google-api-python-client/docs/dyn/youtube_v3.html
+                            ">google api python client</a> doc to find <i>instance methods</i> for  <code>playlists</code>
+                            <br>Or you can google,
+                            <br><a target="_blank " href="https://developers.google.com/youtube/v3/docs/playlists#:~:text=Was%20this%20helpful%3F-,Playlists,-bookmark_border
+                            ">youtube api reference &rarr;playlists</a>
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/01.mp4"></video>
+                    </div>
+                </div>  
+                <!-- 02. Get the channel id -->
+                <div class="fc step">
+                    <h3>02.</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                           Get the channel id with a script,
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code o">
+UCCezIgC97PvUuR4_gbFUs5g    </pre>	
+                        </div>
+                        <div class="code-container">
+                            <pre class="copy-code">
+import json
+import os 
+from googleapiclient.discovery import build
+os.system('cls')
+api_key = 'AIzaSyDoVmGn11RbYZEIaFIuvCpLumzBeyvDmWM'
+youtube = build('youtube','v3',developerKey=api_key)
+pl_request = youtube.search().list(
+    q='Corey Schafer',
+    part='snippet',
+    type='channel'
+)
+pl_response = pl_request.execute()
+with open('json_file.json','w') as f:
+    f.write(json.dumps(pl_response,indent=2))
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/02.png"></img>
+                    </div>
+                </div>
+                <!-- 03. Or go to the homepage -->
+                <div class="fc step">
+                    <h3>03.</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Or go to the home page and get the <code class="o">channelId</code>
+                            from the URL
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code o">
+UCCezIgC97PvUuR4_gbFUs5g</pre>
+                        </div>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/03.png"></img>
+                    </div>
+                </div>
+                <!-- 04. place channelId into the search().list() method -->
+                <div class="fc step">
+                    <h3>04.</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            place <code class="o">channelId</code> into the <code><span class="m">playlists</span>().list()</code> method
+                        </p>
+                        <div class="code-container">
+                            <pre tabindex="1" class="copy-code">
+import json
+import os 
+from googleapiclient.discovery import build
+os.system('cls')
+api_key = 'AIzaSyDoVmGn11RbYZEIaFIuvCpLumzBeyvDmWM'
+youtube = build('youtube','v3',developerKey=api_key)
+
+pl_request = youtube.<span class="m">playlists</span>().list(
+    part='snippet',
+    channelId='<span class="o">UCCezIgC97PvUuR4_gbFUs5g</span>'
+)
+pl_response = pl_request.execute()
+with open('json_file.json','w') as f:
+    f.write(json.dumps(pl_response, indent=2))
+                </pre>
+                        </div>
+                        <p>
+                            No we have each playlist from the channel
+                        </p>
+                    </div>
+                    <div class="step-vid">
+                        <video src="imagesVideos/04.mp4"></video>
+                    </div>
+                </div>
+                <!-- 05. We will need the id for a playlist -->
+                <div class="step">
+                    <h3>05.</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            We will need the <span class="m">id</span> for a <code ><span class="m">playlists</span>()</code> method,
+                         
+                        </p>
+                        <p>
+                            It can be found nested within the the JSON returned from the above 
+                            <code>search().list()</code> method
+                         </p>
+                        <div tabindex="1" class="code-container">
+                            <pre tabindex="1" class="copy-code m">
+PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p</pre>	
+                        </div>
+                        
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/05.png"></img>
+                    </div>
+                </div>
+                <!-- 06. Or get it from the url of the playlis -->
+                <div class="fc step">
+                    <h3>06.</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            or go and get it from the url
+                            <br><code><a target="_blank" href="https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS">https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS</a></code>
+                        </p>
+  
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/06.png"></img>
+                    </div>
+                </div>
+                <!-- 07. Paste the playlist id into the list method of playlistitems -->
+                <div class="fc step">
+                    <h3>07.</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Paste the <span class="m">playlist id</span> into the <code>list</code> method of <code><span class="m">playlistitems</span>()</code> 
+                            as the <code class="m">playlistId</code> parameter's value. 
+                            and change the part parameter value to <code class="m">contentDetails</code>
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+import json
+import os 
+from googleapiclient.discovery import build
+os.system('cls')
+api_key = 'AIzaSyDoVmGn11RbYZEIaFIuvCpLumzBeyvDmWM'
+youtube = build('youtube','v3',developerKey=api_key)
+
+pl_request = youtube.<span class="m">playlistItems</span>().list(
+        part='<span class="m">contentDetails</span>',
+        playlistId='<span class="m">PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p</span>'
+)
+pl_response = pl_request.execute()
+
+with open('json_file.json','w') as f:
+    f.write(json.dumps(pl_response, indent=2))
+</pre>
+                        </div>
+                        <p> 
+                            Now we have each <code>playlistItem</code> which is every video in the playlist
+                        </p>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/07.png"></img>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- Part 2 -get every video from playlistItem() -->
+        <div class="part">
+            <a id="part02"  tabindex="1" href="#" class="dropPart">Part 2 -get every video from <code>playlistItems()</code>
+            </a>
+            <div class="steps-container  ">
+                <!-- 00. Continue with script from -->
+                <div class="step">
+                    <h3>00</h3>
+                    <div tabindex="1" class="step-txt">
+                        <div class="code-container">
+                            <pre class="copy-code">
+import json
+import os 
+from googleapiclient.discovery import build
+os.system('cls')
+api_key = 'AIzaSyDoVmGn11RbYZEIaFIuvCpLumzBeyvDmWM'
+youtube = build('youtube','v3',developerKey=api_key)
+
+pl_request = youtube.playlistItems().list(
+part='contentDetails',
+playlistId='PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p'
+)
+pl_response = pl_request.execute()
+
+for item in pl_response['items']:
+vid_id = item['contentDetails']['videoId']	
+print(vid_id)
+</pre>	
+                        </div>
+                        <p>
+                            Loop through each item in the response of <code>playlistItems()</code>
+                        </p>
+                    </div>
+                    <div class="step-img">
+                        <img src="imagesVideos/09.png" alt="">
+                    </div>
+                </div>
+
+                                <!-- 01. Get the id of each -->
+                <div class="step">
+                    <h3>01.</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Get the <code>id</code> of each <code>pl_response</code> item and append them 
+                            to a <code>list []</code>
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+import json
+import os 
+from googleapiclient.discovery import build
+os.system('cls')
+api_key = 'AIzaSyDoVmGn11RbYZEIaFIuvCpLumzBeyvDmWM'
+youtube = build('youtube','v3',developerKey=api_key)
+
+pl_request = youtube.playlistItems().list(
+part='contentDetails',
+playlistId='PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p'
+)
+pl_response = pl_request.execute()
+
+vid_ids = []
+for item in pl_response['items']:
+vid_id = item['contentDetails']['videoId']
+print(vid_id)
+vid_ids.append(vid_id)
+print(vid_ids)
+</pre>	
+                        </div>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/09.png"></img>
+                    </div>
+                </div>  
+                <!-- 02. Place the vid_ids list items as a comma seperated value into the videos().list()  -->
+                <div class="fc step">
+                    <h2>02.</h2>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Make another request for the <code class="m">videos()</code> method,
+                            <br>
+                            then,
+                            <br>
+                            place the vid_ids list items as a comma seperated value into the videos().list()
+                                <span class="o">id</span> parameter
+                            
+    
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+    import json
+    import os 
+    from googleapiclient.discovery import build
+    os.system('cls')
+    api_key = 'AIzaSyDoVmGn11RbYZEIaFIuvCpLumzBeyvDmWM'
+    youtube = build('youtube','v3',developerKey=api_key)
+    
+    pl_request = youtube.playlistItems().list(
+        part='contentDetails',
+        playlistId='PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p'
+    )
+    pl_response = pl_request.execute()  
+    vid_ids = []
+    for item in pl_response['items']:
+        vid_id = item['contentDetails']['videoId']
+        vid_ids.append(vid_id)
+    
+    vid_request = youtube.videos().list(
+        part='contentDetails',
+        <span class="o">id</span>=','.join(vid_ids)
+    )
+    
+    vid_response = vid_request.execute()
+    
+    for item in vid_response['items']:
+        print(item)
+        print()
+    </pre>
+                        </div>
+                        <p>
+                            Now, we can access the <span class="r">duration</span> of each video
+                        </p>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/10.png"></img>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- Part 3 -Part 3 - Convert duration with Regex -->
+        <div class="part">
+            <a id="part03"  tabindex="1" href="#" class="dropPart">Part 3 - Find <code class="r">duration</code> with Regex
+            </a>
+            <div class="steps-container  ">
+                <!-- 00. Continue with script from -->
+                <div class="step">
+                    <h3>00</h3>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Import the regex library , <code>import <span class="b">re</span></code>,
+                            <br> 
+                            <br> <span class="b">compile the expression</span>,
+                            <br> loop through each <code class="m">item['contentDetails']['duration']</code>,
+                            <br> and <code><span class="o">search</span>()</code> the value with the expression
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+import <span class="b">re</span>
+import re
+import json
+import os 
+from googleapiclient.discovery import build
+os.system('cls')
+api_key = 'AIzaSyDoVmGn11RbYZEIaFIuvCpLumzBeyvDmWM'
+youtube = build('youtube','v3',developerKey=api_key)
+
+ch_response = youtube.search().list(
+    q='Corey Schafer',
+    part='snippet',
+    type='channel'
+).execute()
+chId = ch_response['items'][0]['id']['channelId']
+
+pl_response = youtube.playlists().list(
+    part='contentDetails,snippet',
+    channelId=chId
+).execute()
+plId = pl_response['items'][0]['id']
+
+plItems_response = youtube.playlistItems().list(
+    part='contentDetails',
+    playlistId=plId
+).execute()
+
+videos = []
+
+for item in plItems_response['items']:
+    vidId = item['contentDetails']['videoId']
+    videos.append(vidId)
+
+videos_response = youtube.videos().list(
+    part='contentDetails',
+    id=','.join(videos)
+).execute()
+
+<span class="b">
+hours_pattern = re.compile(r'(\d+)H')
+minutes_pattern = re.compile(r'(\d+)M')
+seconds_pattern = re.compile(r'(\d+)S')
+</span>
+
+for item in videos_response['items']:
+    duration = item['contentDetails']['duration']
+
+    hours = hours_pattern.<span class="o">search</span>(duration)
+    minutes = minutes_pattern.<span class="o">search</span>(duration)
+    seconds = seconds_pattern.<span class="o">search</span>(duration)
+    print(hours, minutes, seconds)
+</pre>	
+                        </div>
+                    </div>
+                    <div class="step-img">
+                        <img src="imagesVideos/11.png" alt="">
+                    </div>
+                </div>
+               <!-- 01. Take the first <code>group(1)</code> of the hours, minutes, and seconds; -->
+                <div class="fc step">
+                    <h2>01.</h2>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Take the first <code>group(1)</code> of the hours, minutes, and seconds;
+                            and reassign the variables to themselves with a ternary operation incase the value
+                            return 0/None. <span class="r">** Make sure</span>
+                            you convert the hours,minutes and seconds into integers with <code><span class="r">int</span>()</code>
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+    for item in videos_response['items']:
+        duration = item['contentDetails']['duration']
+
+        hours = hours_pattern.search(duration)
+        minutes = minutes_pattern.search(duration)
+        seconds = seconds_pattern.search(duration)
+
+        hours = <span class="r">int</span>(hours.group(1)) if hours else 0
+        minutes = <span class="r">int</span>(minutes.group(1)) if minutes else 0
+        seconds = <span class="r">int</span>(seconds.group(1)) if seconds else 0
+        print(hours, minutes, seconds)
+    </pre>
+                        </div>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/12.png"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Part 4 - Use datetime class to convert duration into seconds -->
+        <div class="part">
+            <a id="part04"  tabindex="1" href="#" class="dropPart">Part 4 - Use <code class="n">datetime</code> class to convert duration into seconds
+            </a>
+            <div class="steps-container  ">
+               <!-- 00. Import the datetime class and convert the duration into secons-->
+                <div class="fc step">
+                    <h2>00.</h2>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Import the <code class="o">timedelta</code> class from the <code class="lc"> datetime</code> 
+                            library and convert the duration into seconds. Then use the 
+                            <code><span class="m">total_seconds</span>()</code>
+                            method on the class.
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+from <span class="lc">datetime</span> import <code class="o">datetime</code>
+for item in videos_response['items']:
+    duration = item['contentDetails']['duration']
+
+    hours = hours_pattern.search(duration)
+    minutes = minutes_pattern.search(duration)
+    seconds = seconds_pattern.search(duration)
+
+    hours = <span class="r">int</span>(hours.group(1)) if hours else 0
+    minutes = <span class="r">int</span>(minutes.group(1)) if minutes else 0
+    seconds = <span class="r">int</span>(seconds.group(1)) if seconds else 0
+
+    <span class="b">videos_seconds = </span> <span class="o">timedelta</span>(
+        hours = hours,
+        minutes = minutes,
+        seconds = seconds
+    ).<span class="m">total_seconds</span>()
+
+    print(<span class="b">videos_seconds</span> )
+    </pre>
+                        </div>
+                        <p>
+                            Now we have the total seconds of the first 5 videos, 
+                        </p>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/13.png"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Part 5 - Use <code>nextPageToken</code> to retrieve every video from playlist-->
+        <div class="part">
+            <a id="part05"  tabindex="1" href="#" class="dropPart">Part 5 - Use <code>nextPageToken</code> to retrieve every video from playlist
+            </a>            
+            <div class="steps-container  ">
+                <!-- 00. Import the datetime class and convert the duration into secons-->
+                <div class="fc step">
+                    <h2>00.</h2>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            Use the next page token from the ... items something??
+                            in a infinte while loop. add the parameter <code class="m">maxResults</code> to <code>list()</code>
+                            and give it the max value of 50.
+                            <br>
+                            Start a value of <code class="o">nextPageToken</code> with a value of <code class="b">None</code>
+                            <br>Change the value in the loop to the <code class="r">pageToken</code>
+                            <br>Until the <code class="o">nextPageToken</code> is None again
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+hours_pattern = re.compile(r'(\d+)H')
+minutes_pattern = re.compile(r'(\d+)M')
+seconds_pattern = re.compile(r'(\d+)S')
+
+<span class="o">nextPageToken</span> = None
+while True:
+    plItems_response = youtube.playlistItems().list(
+        part='contentDetails',
+        playlistId=plId,
+        <span class="m">maxResults</span>=50,
+        <span class="r">pageToken</span>=<span class="o">nextPageToken</span>
+      ).execute()
+    
+    videos = []
+    for item in plItems_response['items']:
+        vidId = item['contentDetails']['videoId']
+        videos.append(vidId)
+
+    videos_response = youtube.videos().list(
+        part='contentDetails',
+        id=','.join(videos)
+      ).execute()
+
+    for item in videos_response['items']:
+        duration = item['contentDetails']['duration']
+        hours = hours_pattern.search(duration)
+        minutes = minutes_pattern.search(duration)
+        seconds = seconds_pattern.search(duration)
+        hours = int(hours.group(1)) if hours else 0
+        minutes = int(minutes.group(1)) if minutes else 0
+        seconds = int(seconds.group(1)) if seconds else 0
+        videos_seconds =  timedelta(
+            hours = hours,
+            minutes = minutes,
+            seconds = seconds
+        ).total_seconds()
+
+        print(videos_seconds )
+    <span class="o">nextPageToken</span> = pl_response.get('<span class="r">pageToken</span>')   
+    if not nextPageToken:
+        break
+
+
+    </pre>
+                        </div>
+                        <p>
+                            <span class="r">**Also</span> remember to put the <code>re.compile</code> expresisons above the 
+                            while loop.
+                        </p>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/14.png"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Part 6 -add total seconds and convert back to hours, minutes and seconds-->
+        <div class="part">
+
+            <a id="part06"  tabindex="1" href="#" class="dropPart"> Part 6 -add total seconds and convert back to hours, minutes and seconds
+            </a>
+            <div class="steps-container  ">
+                <!-- 00.  Part 6 -add total seconds and convert back to hours, minutes and seconds-->
+                <div class="fc step">
+                    <h2>full code</h2>
+                    <div tabindex="1" class="step-txt">
+                        <p>
+                            add total seconds and convert back to hours , minutes and seconds in a variable 
+                            <code class="m">total_duration</code>, then convert it back into hours minutes and seconds
+                            with <code><span class="o">divmod</span>()</code>
+                        </p>
+                        <div class="code-container">
+                            <pre class="copy-code">
+hours_pattern = re.compile(r'(\d+)H')
+minutes_pattern = re.compile(r'(\d+)M')
+seconds_pattern = re.compile(r'(\d+)S')
+
+nextPageToken = None
+
+<span class="m">total_duration</span> = 0
+while True:
+    plItems_response = youtube.playlistItems().list(
+        part='contentDetails',
+        playlistId=plId,
+        maxResults=50,
+        pageToken=nextPageToken
+      ).execute()
+    
+    videos = []
+    for item in plItems_response['items']:
+        vidId = item['contentDetails']['videoId']
+        videos.append(vidId)
+
+    videos_response = youtube.videos().list(
+        part='contentDetails',
+        id=','.join(videos)
+      ).execute()
+    for item in videos_response['items']:
+        duration = item['contentDetails']['duration']
+        hours = hours_pattern.search(duration)
+        minutes = minutes_pattern.search(duration)
+        seconds = seconds_pattern.search(duration)
+        hours = int(hours.group(1)) if hours else 0
+        minutes = int(minutes.group(1)) if minutes else 0
+        seconds = int(seconds.group(1)) if seconds else 0
+        videos_seconds =  timedelta(
+            hours = hours,
+            minutes = minutes,
+            seconds = seconds
+        ).total_seconds()
+
+        <span class="m">total_duration</span> += videos_seconds
+    nextPageToken = pl_response.get('pageToken')   
+    if not nextPageToken:
+        break
+total_duration = <span class="o">int</span>(total_duration)
+mins,secs = <span class="o">divmod</span>(total_duration,60)
+hrs,mins = <span class="o">divmod</span>(mins,60)
+
+print(f'{hrs}:{mins}:{secs}')
+
+
+     </pre>
+                        </div>
+                        <p>
+                            <span class="r">**Also</span> remember to convert <code>total_duration</code>
+                            to <code><span class="r">int</span>()</code>
+                        </p>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/15.png"></img>
+                    </div>
+                </div>
+            </div>
+            <h2>full code</h2>
+            <div class="steps-container show  ">
+                <!-- 00.  Part 6 -add total seconds and convert back to hours, minutes and seconds-->
+                <div class="step">
+                    <div tabindex="1" class="step-txt">
+            <div class="code-container">
+                <pre tabindex="1" id="fullCode" class="copy-code ">
+hours_pattern = re.compile(r'(\d+)H')
+minutes_pattern = re.compile(r'(\d+)M')
+seconds_pattern = re.compile(r'(\d+)S')
+
+nextPageToken = None
+
+total_duration = 0
+while True:
+    plItems_response = youtube.playlistItems().list(
+        part='contentDetails',
+        playlistId=plId,
+        maxResults=50,
+        pageToken=nextPageToken
+      ).execute()
+    
+    videos = []
+    for item in plItems_response['items']:
+        vidId = item['contentDetails']['videoId']
+        videos.append(vidId)
+
+    videos_response = youtube.videos().list(
+        part='contentDetails',
+        id=','.join(videos)
+      ).execute()
+    for item in videos_response['items']:
+        duration = item['contentDetails']['duration']
+        hours = hours_pattern.search(duration)
+        minutes = minutes_pattern.search(duration)
+        seconds = seconds_pattern.search(duration)
+        hours = int(hours.group(1)) if hours else 0
+        minutes = int(minutes.group(1)) if minutes else 0
+        seconds = int(seconds.group(1)) if seconds else 0
+        videos_seconds =  timedelta(
+            hours = hours,
+            minutes = minutes,
+            seconds = seconds
+        ).total_seconds()
+
+        total_duration += videos_seconds
+    nextPageToken = pl_response.get('pageToken')   
+    if not nextPageToken:
+        break
+total_duration = int(total_duration)
+mins,secs = divmod(total_duration,60)
+hrs,mins = divmod(mins,60)
+
+print(f'{hrs}:{mins}:{secs}')
+
+
+     </pre>	
+            </div>
+                    </div>
+                    <div class="fi step-img">
+                        <img src="imagesVideos/15.png"></img>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    
+
+
+
+    </main>         
+
+</body>
+</html>

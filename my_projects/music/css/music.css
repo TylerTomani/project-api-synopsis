@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+h4.year {
+    background-color: lightskyblue;
+    display: inline-block;
+    width: 60%;
+}
+main {
+    margin: 0 2.5%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex ;
+    flex-direction: column;
+}
+/* .artist-vs-artist-container {display: flex;width: 100%;} */
+.artist {
+    border: 2px solid #22f;
+    margin: 0 2.5%;
+}
+.artist > .artist-row{
+    display: flex; 
+    border-bottom: 2px black ridge; 
+    background-color: lightslategray;}
+.artist > .artist-pic-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+}
+.artist > .artist-row > .artist-facts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artist > .artist-pic-container > .artist-pic{
+    min-height: 250px;
+}
+
+.artist > .col-header-row {
+    display: flex;
+    padding-top: 1%;
+    font-size: 1.05rem;
+}
+/* .track-col,.my-fav-col,.voted-col,.personal-fav,.public-vote {border: 1px solid black;} */
+.col-header-row{
+    width: 100%;
+    /* background-color: red; */
+    border-bottom: 1px solid black;
+    display: flex;
+}
+.col-header-row > .track-col{
+    flex-basis: 60%;
+    background-color: darkgrey;
+}
+.col-header-row > .my-fav-col{
+    /* background-color: yellow; */
+}
+.col-header-row > .voted-col{
+    /* background-color: lightgoldenrodyellow; */
+}
+.col-header-row>.voted-col,
+.col-header-row>.my-fav-col {
+    flex-basis: 20%;
+    border-left: 1px solid black;
+}
+/* The above is the top of page  */
+/* Track           My Favorite         Voted Favorite */
+.album-track-row {
+    /* background-color: darkgray; */
+    display: flex;
+    /* border: 3px solid blue; */
+}
+.album-track-row>.album-pic{
+    flex-basis: 20%;
+    
+}
+.album-track-row>.album-pic>img {
+    width: 55%;
+}
+
+.album-track-row > .album-tracks-col {
+    flex-basis: 80%;
+    flex-direction: column;
+    max-height: 150px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.album-tracks-col  > .track-artist-row{
+    flex-basis: 100%;
+    /* background-color: white; */
+    display: flex;
+    /* flex-direction: column; */
+}
+.album-tracks-col  > .track-artist-row > .track{
+    flex-basis: 50%;
+    background-color: white;
+    /* border: 1px solid black; */
+}
+.album-tracks-col>.track-artist-row > .public-vote{
+    /* background-color: yellow; */
+
+}
+.personal-fav.check{
+    display: flex;
+    flex-direction: column;
+}
+.album-tracks-col>.track-artist-row > .public-vote,
+.album-tracks-col  > .track-artist-row > .personal-fav{
+    flex-basis: 25%;
+    border-left: 1px solid black;
+    /* border-right: 1px solid black; */
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+.track-artist-row{
+    display: flex;
+    /* background-color: lightgreen; */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.track-artist-row > .track{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.track-artist-row > .track > .links > img{
+    max-width: 124px;
+}
+.track-artist-row > .track > .links{
+    display: flex;
+    align-items: center;
+}
+.track-artist-row > .track > .links > .spotify-link{
+    padding-left: 15%;
+}
+
+.track-artist-row>.personal-fav{
+    /* background-color: yellow; */
+}
+.track-artist-row>.public-vote{
+    /* background-color: lightgoldenrodyellow; */
+}
+.track-artist-row>.public-vote,
+.track-artist-row > .personal-fav{
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid black ;
+}
+
+img {
+    width: 40%;
+    max-width: 200px;
+}
+.copy-code:focus,.copy-code:active{
+    border: 3px blue solid
+}
+.hide {
+    display: none !important;
+}
+.not-good {
+    background-color: rgb(255,27,7,.4) !important;
+}
+.check {
+    background-color: gold !important;
+}
+#show{
+    display: inline-block !important;
+}
